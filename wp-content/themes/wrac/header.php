@@ -45,6 +45,7 @@
     wp_head();
     
 ?>
+<link href='http://fonts.googleapis.com/css?family=Arvo:700,400italic,700italic,400' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -63,15 +64,33 @@ if (apply_filters('thematic_open_wrapper', true)) {
     thematic_aboveheader(); 
     
     ?>   
-
+	
     <div id="header">
     
-        <?php 
-        
-        // action hook creating the theme header
-        thematic_header();
-        
-        ?>
+    	<div id="branding">
+    
+        <div id="logo">
+        <div id="blog-title">
+        <span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span>
+        </div>
+        </div>
+        <div id="dome"></div>
+        </div><!--  #branding -->
+        <div id="access">
+	    		
+	    	<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
+	    		
+	    	<?php 
+	    		
+	    	if ((function_exists("has_nav_menu")) && (has_nav_menu(apply_filters('thematic_primary_menu_id', 'primary-menu')))) {
+	    		echo  wp_nav_menu(thematic_nav_menu_args());
+    		} else {
+    			echo  thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));	
+    		}
+    		
+	    	?>
+	        
+		</div><!-- #access -->
 
 	</div><!-- #header-->
     <?php
