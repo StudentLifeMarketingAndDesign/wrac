@@ -231,38 +231,63 @@ ul.sf-menu li li li.sfHover ul {
 -------------------------------------------------------------- */
 
 #main {
-    background-color: #543665;
     clear:both;
-    padding:66px 0 22px 0;
+    padding:33px 0 22px 0;
+    width:1030px;
 }
 #container{
-	width:960px;
+	width:1030px;
 }
 #content{
-	width:930px;
+	width:960px;
 	margin: auto;
+    background-color: #4c315d;
+    padding-top: 33px;
+    padding-bottom: 33px;
 }
 #col1{
 	background-color: #573d66;
-	width:250px;
+	width:275px;
 	float: left;
 	padding: 10px;
+	margin-left: 15px;
 	border: 1px solid #896c95;
 }
 #col2{
 	background-color: #573d66;
-	width:250px;
+	width:275px;
 	float: left;
-	margin-left: 57px;
+	margin-left: 19px;
 	padding: 10px;
 	border: 1px solid #896c95;
 }
 #col3{
 	background-color: #573d66;
-	width:250px;
+	width:275px;
 	float: right;
 	padding: 10px;
+	margin-right: 15px;
 	border: 1px solid #896c95;
+}
+#featured{
+	clear: both;
+	background-color: #8b7097;
+	height:300px;
+	width: 1030px;
+}
+#featured-post{
+	width:550px;
+	margin-left: 68px;
+	margin-top: 30px;
+	float:left;
+}
+#featured-thumb{
+	width:300px;
+	height:200px;
+	background-color: #666;
+	float:left;
+	margin-top: 30px;
+	margin-left: 40px;
 }
 .page-title {
     font-size:13px;

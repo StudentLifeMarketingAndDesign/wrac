@@ -25,7 +25,6 @@
 	        
 	            ?>
 	            
-	            <div id="col1">
 				<div id="post-<?php the_ID();
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
@@ -54,69 +53,6 @@
 	
 					</div><!-- .entry-content -->
 				</div><!-- #post -->
-	            </div>
-	            
-	            <div id="col2">
-				<div id="post-<?php the_ID();
-					echo '" ';
-					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
-						post_class();
-						echo '>';
-					} else {
-						echo 'class="';
-						thematic_post_class();
-						echo '">';
-					}
-	                
-	                // creating the post header
-	                thematic_postheader();
-	                
-	                ?>
-	                
-					<div class="entry-content">
-	
-	                    <?php
-	                    
-	                    the_content();
-	                    
-	                    wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
-	                    
-	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
-	
-					</div><!-- .entry-content -->
-				</div><!-- #post -->
-	            </div>
-	            
-	            <div id="col3">
-				<div id="post-<?php the_ID();
-					echo '" ';
-					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
-						post_class();
-						echo '>';
-					} else {
-						echo 'class="';
-						thematic_post_class();
-						echo '">';
-					}
-	                
-	                // creating the post header
-	                thematic_postheader();
-	                
-	                ?>
-	                
-					<div class="entry-content">
-	
-	                    <?php
-	                    
-	                    the_content();
-	                    
-	                    wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
-	                    
-	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
-	
-					</div><!-- .entry-content -->
-				</div><!-- #post -->
-	            </div>
 	
 	        <?php
 	        
