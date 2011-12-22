@@ -82,6 +82,7 @@
             	?>
 				</div>
             	<div id="featured-thumb"></div>
+            	<div id="more-topics"><span>more topics</span></div>
             	</div>
 		
 			<?php thematic_belowcontent(); ?> 

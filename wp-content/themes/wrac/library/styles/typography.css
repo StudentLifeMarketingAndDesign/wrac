@@ -7,8 +7,8 @@
 -------------------------------------------------------------- */   
 
 body, input, textarea {
-    color:#000;    
-    font: 12px Arial,sans-serif;
+    color:#FFF;    
+    font: 12px helvetica, sans-serif;
     line-height:18px;
 }
 
@@ -20,6 +20,15 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight:normal;
 	clear:both;
 	color: #FFF;
+	margin-bottom: 8px;
+}
+
+h2 {
+	font-size:26px;
+}
+
+h3 {
+	font-size: 20px;
 }
 
 /* Text elements
@@ -27,12 +36,15 @@ h1,h2,h3,h4,h5,h6 {
 
 p {
     margin-bottom:18px;
+    font: 12px helvetica, sans-serif;
 }
 ul {
 	margin: 0 0 18px 2.5em;
+    font: 12px helvetica, sans-serif;
 }
 ol {
 	margin: 0 0 18px 2.5em;
+    font: 12px helvetica, sans-serif;
 }
 ul {
 	list-style:disc;
