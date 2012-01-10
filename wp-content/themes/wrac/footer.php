@@ -23,10 +23,34 @@
 		E: wrac@uiowa.edu
 		</p>
         </div>
-        <ul id="services"></ul>
-        <ul id="events"></ul>
-        <ul id="get-involved"></ul>
-        <ul id="resources"></ul>
+        <div id="house"></div>
+        <ul id="services">
+        <h3>Services</h3>
+        <li>Support & Discussion</li>
+        <li>Groups</li>
+        <li>Counseling</li>
+        <li>Scholarships</li>
+        <li>Library</li>
+        </ul>
+        <ul id="events">
+        <h3>Events</h3>
+        <li>Upcoming</li>
+        <li>Past</li>
+        </ul>
+        <ul id="get-involved">
+        <h3>Get Involved</h3>
+        <li>Volunteer Programs</li>
+        <li>Give to WRAC</li>
+        </ul>
+        <ul id="resources">
+        <h3>Resources</h3>
+        <li>Advocacy</li>
+        <li>Legal</li>
+        <li>Mental Health</li>
+        <li>Safety</li>
+        </ul>
+        
+        <div id="disabilities">Individuals with disabilities are encouraged to attend all University of Iowa sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in this program, please contact the Center for Student Leadership and Involvement in advance at 319-335-3059.</div>
         
 	</div><!-- #footer -->
 	

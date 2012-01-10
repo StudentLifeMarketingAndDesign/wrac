@@ -11,8 +11,6 @@
 		<div id="container">
 	
 			<?php thematic_abovecontent(); ?>
-            
-            <div id="slider"></div>
 	
 			<div id="content">
 
@@ -24,9 +22,6 @@
             	// calling the widget area 'index-top'
             	get_sidebar('index-top');
             	?>
-            	<div id="col_head1"><h1>Latest Blog Posts</h1></div>
-            	<div id="col_head2"><h1>Initiatives</h1></div>
-            	<div id="col_head3"><h1>Upcoming Events</h1></div>
 				<div id="col1">
 				<?php
             	// action hook for placing content above the index loop

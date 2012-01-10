@@ -8,7 +8,7 @@
 
 body, input, textarea {
     color:#FFF;    
-    font: 12px helvetica, sans-serif;
+    font: 18px helvetica, sans-serif;
     line-height:18px;
 }
 
@@ -25,10 +25,12 @@ h1,h2,h3,h4,h5,h6 {
 
 h2 {
 	font-size:26px;
+	font-weight:normal;
 }
 
 h3 {
 	font-size: 20px;
+	font-weight:normal;
 }
 
 /* Text elements
@@ -36,7 +38,7 @@ h3 {
 
 p {
     margin-bottom:18px;
-    font: 12px helvetica, sans-serif;
+    font: 18px helvetica, sans-serif;
 }
 ul {
 	margin: 0 0 18px 2.5em;

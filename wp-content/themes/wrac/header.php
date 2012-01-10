@@ -64,6 +64,7 @@ if (apply_filters('thematic_open_wrapper', true)) {
     thematic_aboveheader(); 
     
     ?>   
+	<div id="exit"></div>
 	
     <div id="header">
     
