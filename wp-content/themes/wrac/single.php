@@ -12,7 +12,7 @@
 			
 			<?php thematic_abovecontent(); ?>
 			
-			<div id="content">
+			<div id="page_content">
 		
     	        <?php 
     	        
@@ -28,20 +28,27 @@
     	        thematic_singlepost();
 				
     	        // calling the widget area 'single-insert'
-    	        get_sidebar('single-insert');
+    	        //get_sidebar('single-insert');
 		
     	        // create the navigation below the content
-				thematic_navigation_below();
+				//thematic_navigation_below();
 		
     	        // calling the comments template
-    	        thematic_comments_template();
+    	        //thematic_comments_template();
 		
     	        // calling the widget area 'single-bottom'
-    	        get_sidebar('single-bottom');
+    	        //get_sidebar('single-bottom');
+    	        
+    	        
+    	        
+    			// calling the standard sidebar 
+   				 thematic_sidebar();
     	        
     	        ?>
+    	        
+    	    <div style="clear:both;"></div>
 		
-			</div><!-- #content -->
+			</div><!-- #page-content -->
 			
 			<?php thematic_belowcontent(); ?> 
 			
@@ -51,9 +58,6 @@
 
     // action hook for placing content below #container
     thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
     
     // calling footer.php
     get_footer();

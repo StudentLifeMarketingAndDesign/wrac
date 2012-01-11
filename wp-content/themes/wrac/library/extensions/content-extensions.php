@@ -313,7 +313,7 @@ if (function_exists('childtheme_override_archive_loop'))  {
 <?php thematic_content(); ?>
 
 					</div><!-- .entry-content -->
-					<?php thematic_postfooter(); ?>
+					<?php //thematic_postfooter(); ?>
 				</div><!-- #post -->
 
 			<?php 
@@ -354,7 +354,7 @@ if (function_exists('childtheme_override_author_loop'))  {
 <?php thematic_content(); ?>
 
 					</div><!-- .entry-content -->
-					<?php thematic_postfooter(); ?>
+					<?php //thematic_postfooter(); ?>
 				</div><!-- #post -->
 
 			<?php 
@@ -394,7 +394,7 @@ if (function_exists('childtheme_override_category_loop'))  {
 <?php thematic_content(); ?>
 	
 					</div><!-- .entry-content -->
-					<?php thematic_postfooter(); ?>
+					<?php //thematic_postfooter(); ?>
 				</div><!-- #post -->
 
 			<?php 
@@ -454,7 +454,7 @@ if (function_exists('childtheme_override_index_loop'))  {
 
 					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
 					</div><!-- .entry-content -->
-					<?php thematic_postfooter(); ?>
+					<?php //thematic_postfooter(); ?>
 				</div><!-- #post -->
 
 			<?php 
@@ -500,7 +500,40 @@ if (function_exists('childtheme_override_single_post'))  {
 
 						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
 					</div><!-- .entry-content -->
-					<?php thematic_postfooter(); ?>
+					<?php //thematic_postfooter(); ?>
+				</div><!-- #post -->
+		<?php
+
+			thematic_belowpost();
+	}
+} // end single_post
+
+
+// Featured Post
+if (function_exists('childtheme_override_featured_post'))  {
+	function thematic_featured_post() {
+		childtheme_override_featured_post();
+	}
+} else {
+	function thematic_featured_post() {?>
+			
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+						echo '>';
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}?>
+					<h1 class="entry-title">Featured Article: <a href='<?php the_permalink() ?>' rel='bookmark' title='<?php the_title(); ?>'><?php the_title(); ?></a></h1>
+					<div class="entry-content">
+<?php thematic_content(); ?>
+
+						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+					</div><!-- .entry-content -->
+					<?php //thematic_postfooter(); ?>
 				</div><!-- #post -->
 		<?php
 
@@ -537,7 +570,7 @@ if (function_exists('childtheme_override_search_loop'))  {
 <?php thematic_content(); ?>
 
 					</div><!-- .entry-content -->
-					<?php thematic_postfooter(); ?>
+					<?php //thematic_postfooter(); ?>
 				</div><!-- #post -->
 
 			<?php 
@@ -577,7 +610,7 @@ if (function_exists('childtheme_override_tag_loop'))  {
 <?php thematic_content() ?>
 
 					</div><!-- .entry-content -->
-					<?php thematic_postfooter(); ?>
+					<?php //thematic_postfooter(); ?>
 				</div><!-- #post -->
 
 			<?php 
@@ -693,8 +726,8 @@ if (function_exists('childtheme_override_postheader_postmeta'))  {
 	function thematic_postheader_postmeta() {
 
 	    $postmeta = '<div class="entry-meta">';
-	    $postmeta .= thematic_postmeta_authorlink();
-	    $postmeta .= '<span class="meta-sep meta-sep-entry-date"> | </span>';
+//	    $postmeta .= thematic_postmeta_authorlink();
+//	    $postmeta .= '<span class="meta-sep meta-sep-entry-date"> | </span>';
 	    $postmeta .= thematic_postmeta_entrydate();
 	    
 	    $postmeta .= thematic_postmeta_editlink();
@@ -738,7 +771,7 @@ if (function_exists('childtheme_override_postmeta_entrydate'))  {
 } else {
 	function thematic_postmeta_entrydate() {
 	
-	    $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('Published: ', 'thematic') . '</span>';
+	    $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('posted on ', 'thematic') . '</span>';
 	    $entrydate .= '<span class="entry-date"><abbr class="published" title="';
 	    $entrydate .= get_the_time(thematic_time_title()) . '">';
 	    $entrydate .= get_the_time(thematic_time_display());

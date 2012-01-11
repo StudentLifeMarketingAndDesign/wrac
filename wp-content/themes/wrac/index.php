@@ -80,14 +80,22 @@
             	thematic_above_indexloop();
 				
             	// action hook creating the index loop
-            	thematic_indexloop();
+            	thematic_featured_post();
 				
             	// action hook for placing content below the index loop
             	thematic_below_indexloop();
             	?>
 				</div>
             	<div id="featured-thumb"></div>
-            	<div id="more-topics"><span>more topics</span></div>
+            	<div id="more-topics"><span>more topics</span>
+            	<ul>
+            	<li>Advocacy</li>
+            	<li>Legal</li>
+            	<li>Mental Health</li>
+            	<li>Safety</li>
+            	<li>Family</li>
+            	</ul>
+            	</div>
             	</div>
             <div id="content-butt"></div>
 		

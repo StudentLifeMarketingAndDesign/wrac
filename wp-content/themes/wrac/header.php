@@ -64,7 +64,7 @@ if (apply_filters('thematic_open_wrapper', true)) {
     thematic_aboveheader(); 
     
     ?>   
-	<div id="exit"></div>
+	<a href="http://google.com"><div id="exit"></div></a>
 	
     <div id="header">
     
