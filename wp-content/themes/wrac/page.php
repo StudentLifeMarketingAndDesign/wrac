@@ -12,7 +12,7 @@
 		
 			<?php thematic_abovecontent(); ?>
 		
-			<div id="content">
+			<div id="page_content">
 	
 	            <?php
 	        
@@ -57,9 +57,6 @@
 	        <?php
 	        
 	        thematic_belowpost();
-	        
-	        // calling the widget area 'page-bottom'
-	        get_sidebar('page-bottom');
 	        
 	        ?>
 	

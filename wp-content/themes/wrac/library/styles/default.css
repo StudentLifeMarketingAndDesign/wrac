@@ -3,6 +3,7 @@
 -------------------------------------------------------------- */
 body {
 	background-image:url('images/bg.jpg');
+	background-position: center;
 }
 
 body, input, textarea {
@@ -254,6 +255,17 @@ ul.sf-menu li li li.sfHover ul {
 	margin: auto;
     padding: 20px;
     background-image: url('images/bg.png');
+}
+#page_content h1{
+	color:#f5714e;
+	font-size: 60px;
+	font-weight: bold;
+	margin-top: 20px
+}
+#page_content h2{
+	color:#f5714e;
+	font-size: 32px;
+	font-weight: lighter;
 }
 #content{
 	width:960px;
@@ -858,6 +870,65 @@ li.content-column {
 /* =Asides, Sidebars & Widget-Ready Areas
 -------------------------------------------------------------- */
 
+.sb_header{
+	width:210px;
+	height:45px;
+	background-color: #f5714e;
+	float: right;
+	text-align: center;
+	clear: right;
+	margin-top: 28px;
+}
+
+.sb_header h1{
+	font-family: 'arvo';
+	font-size: 28px;
+	margin-top: 12px;
+	font-weight: lighter;
+}
+
+.sidebar {
+    padding:18px 10px 0 10px;
+    margin-bottom:22px;
+	background-color: #573d66;
+	border: 1px solid #896c95;
+	width:180px;
+	float: right;
+	margin-right: 4px;
+	clear: right;
+}
+
+.sidebar h2{
+	font-family: 'arvo';
+	font-size: 16px;
+	font-weight: lighter;
+	margin-bottom: 10px;
+}
+
+.sidebar p{
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.sidebar ul {
+	list-style: none;
+	font-family: 'arvo';
+	font-weight: lighter;
+	margin-left: 0px;
+}
+
+.sidebar li{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+
+.sidebar li.large{
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-size: 24px;
+}
+
 .aside,
 .aside input {
     font-size:13px;
@@ -899,7 +970,6 @@ li.content-column {
 }
 .aside h3 {
     font-size:15px;
-    font-style:italic;
     line-height:22px;
 }
 .aside h3 a {
@@ -914,6 +984,7 @@ li.content-column {
 .aside ul {
     list-style:none;
     margin-left:0;
+    font-family: 'arvo';
 }
 .aside ul ul {
     list-style:disc;
