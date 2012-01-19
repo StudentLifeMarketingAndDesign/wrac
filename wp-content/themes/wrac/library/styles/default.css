@@ -16,7 +16,7 @@ body, input, textarea {
 	position:fixed;
 	width:65px;
 	height:196px;
-	margin-top: 200px;
+	margin-top: 35%;
 	z-index: 101;
 }
 
