@@ -80,16 +80,8 @@ if (apply_filters('thematic_open_wrapper', true)) {
         <div id="access">
 	    		
 	    	<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
-	    		
-	    	<?php 
-	    		
-	    	if ((function_exists("has_nav_menu")) && (has_nav_menu(apply_filters('thematic_primary_menu_id', 'primary-menu')))) {
-	    		echo  wp_nav_menu(thematic_nav_menu_args());
-    		} else {
-    			echo  thematic_add_menuclass(wp_page_menu(thematic_page_menu_args()));	
-    		}
-    		
-	    	?>
+            
+            	<?php wp_nav_menu( array('menu' => 'Primary' )); ?>
 	        
 		</div><!-- #access -->
 

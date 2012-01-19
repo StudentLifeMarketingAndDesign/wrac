@@ -88,13 +88,7 @@
 				</div>
             	<div id="featured-thumb"></div>
             	<div id="more-topics"><span>more topics</span>
-            	<ul>
-            	<li>Advocacy</li>
-            	<li>Legal</li>
-            	<li>Mental Health</li>
-            	<li>Safety</li>
-            	<li>Family</li>
-            	</ul>
+            	<?php wp_nav_menu( array('menu' => 'more topics' )); ?>
             	</div>
             	</div>
             <div id="content-butt"></div>

@@ -42,7 +42,7 @@
     	        ?> 	        
     			
 	        
-				<div class="sb_header"><h1>Topics</h1></div>
+				<div class="sb_header"><div>Topics</div></div>
 	        	<div class="sidebar">
 	        	<ul>
 	        	<li class="large">Advocacy</li>
@@ -54,7 +54,7 @@
 	        	</div>
     			
 	        
-				<div class="sb_header"><h1>Partners</h1></div>
+				<div class="sb_header"><div>Partners</div></div>
 	        	<div class="sidebar">
 	        	<ul>
 	        	<li>University Counseling Services</li>
@@ -68,10 +68,10 @@
 	        	</div>
     			
 	        
-				<div class="sb_header"><h1>Give to WRAC</h1></div>
+				<div class="sb_header"><div>Give to WRAC</div></div>
     			
 	        
-				<div class="sb_header"><h1>Request Info</h1></div>
+				<div class="sb_header"><div>Request Info</div></div>
 	        	<div class="sidebar">
 	        	<h2>Want to volunteer with WRAC? Sign up here.</h2>
 	        	<h2>Name:</h2>
@@ -83,7 +83,7 @@
 	        	</div>
     			
 	        
-				<div class="sb_header"><h1>Resources</h1></div>
+				<div class="sb_header"><div>Resources</div></div>
 	        	<div class="sidebar">
 	        	<ul>
 	        	<li>Volunteer Application</li>
