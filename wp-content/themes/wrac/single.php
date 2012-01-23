@@ -44,41 +44,27 @@
 	        
 				<div class="sb_header"><div>Topics</div></div>
 	        	<div class="sidebar">
-	        	<ul>
-	        	<li class="large">Advocacy</li>
-	        	<li class="large">Legal</li>
-	        	<li class="large">Mental Health</li>
-	        	<li class="large">Safety</li>
-	        	<li class="large">Family</li>
-	        	</ul>
+            	<?php wp_nav_menu( array('menu' => 'Topics' )); ?>
 	        	</div>
     			
 	        
 				<div class="sb_header"><div>Partners</div></div>
 	        	<div class="sidebar">
-	        	<ul>
-	        	<li>University Counseling Services</li>
-	        	<li>United Way of Johnson County</li>
-	        	<li>Community Mental Health</li>
-	        	<li>Johnson County Crisis Center</li>
-	        	<li>Rape Victim Advocacy Program</li>
-	        	<li>MECCA Substance Abuse</li>
-	        	<li>Domestic Violence Intervention Program</li>
-	        	</ul>
+            	<?php wp_nav_menu( array('menu' => 'Partners' )); ?>
 	        	</div>
     			
 	        
-				<div class="sb_header"><div>Give to WRAC</div></div>
+				<div class="sb_header_link"><div><a href="wrac/give-to-wrac">Give to WRAC</a></div></div>
     			
 	        
 				<div class="sb_header"><div>Request Info</div></div>
 	        	<div class="sidebar">
-	        	<h2>Want to volunteer with WRAC? Sign up here.</h2>
-	        	<h2>Name:</h2>
-	        	<h2>E-mail:</h2>
-	        	<h2>Phone:</h2>
+	        	<h3>Want to volunteer with WRAC? Sign up here.</h3>
+	        	<h3>Name:</h3>
+	        	<h3>E-mail:</h3>
+	        	<h3>Phone:</h3>
 	        	<p>Please check to indicate need for a disability accommodation to participate.</p>
-	        	<h2>Other Comments or Questions:</h2>
+	        	<h3>Other Comments or Questions:</h3>
 	        	</ul>
 	        	</div>
     			

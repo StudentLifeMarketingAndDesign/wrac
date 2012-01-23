@@ -4,6 +4,7 @@
 body {
 	background-image:url('images/bg.jpg');
 	background-position: center;
+	min-width: 1030px;
 }
 
 body, input, textarea {
@@ -23,6 +24,7 @@ body, input, textarea {
 #wrapper{
 	border-left: solid 3px;
 	border-left-color: #71598c;
+	overflow: hidden;
 }
 
 p, ul, ol, dd, pre {
@@ -77,6 +79,8 @@ a:hover {
 
 #header {
     z-index:2;
+    width:1030px;
+    margin: 0 auto;
 }
 #branding {
     padding:44px 0 44px 0;
@@ -793,7 +797,7 @@ li.content-column {
 /* =Asides, Sidebars & Widget-Ready Areas
 -------------------------------------------------------------- */
 
-.sb_header{
+.sb_header, .sb_header_link{
 	width:210px;
 	height:45px;
 	background-color: #f5714e;
@@ -803,11 +807,19 @@ li.content-column {
 	margin-top: 28px;
 }
 
-.sb_header div{
+.sb_header div, .sb_header_link div{
 	font-family: 'arvo';
 	font-size: 28px;
 	margin-top: 12px;
 	font-weight: lighter;
+}
+
+.sb_header_link div a{
+	text-decoration: none;
+}
+
+.sb_header_link:hover{
+	background-color: #ffd79f;
 }
 
 .sidebar {
@@ -821,7 +833,7 @@ li.content-column {
 	clear: right;
 }
 
-.sidebar h2{
+.sidebar h3{
 	font-family: 'arvo';
 	font-size: 16px;
 	font-weight: lighter;
@@ -844,6 +856,11 @@ li.content-column {
 	margin-top: 10px;
 	margin-bottom: 30px;
 	font-size: 18px;
+	width: 180px;
+}
+
+.sidebar a{
+	text-decoration: none;
 }
 
 .sidebar li.large{
