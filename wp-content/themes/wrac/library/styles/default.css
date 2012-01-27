@@ -347,6 +347,11 @@ a:hover {
 .hentry {
     padding:0 0 22px 0;
 }
+#page_content .hentry {
+    padding:0;
+    width: 680px;
+    float: left;
+}
 .single .hentry {
     padding:0;
     width: 680px;
@@ -460,6 +465,7 @@ a:hover {
 .edit-link {
 	clear:both;
 	display:block;
+	font-family: 'arvo', serif;
 }
 .page-link {
     font-size:13px;

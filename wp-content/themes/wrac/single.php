@@ -39,22 +39,10 @@
     	        // calling the widget area 'single-bottom'
     	        //get_sidebar('single-bottom');
     	        
-    	        ?> 	        
+    	        ?>
     			
 	        
-				<div class="sb_header"><div>Topics</div></div>
-	        	<div class="sidebar">
-            	<?php wp_nav_menu( array('menu' => 'Topics' )); ?>
-	        	</div>
-    			
-	        
-				<div class="sb_header"><div>Partners</div></div>
-	        	<div class="sidebar">
-            	<?php wp_nav_menu( array('menu' => 'Partners' )); ?>
-	        	</div>
-    			
-	        
-				<div class="sb_header_link"><div><a href="wrac/give-to-wrac">Give to WRAC</a></div></div>
+				<div class="sb_header_link"><div><a href="#">Give to WRAC</a></div></div>
     			
 	        
 				<div class="sb_header"><div>Request Info</div></div>
