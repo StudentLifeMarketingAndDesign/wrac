@@ -41,6 +41,12 @@
             	<?php wp_nav_menu( array('menu' => 'Resources' )); ?>
         </div>
         
+        <div id="soc_med">
+        <div id="flickr"></div>
+        <div id="facebook"></div>
+        <div id="twitter"></div>
+        </div>
+        
         <div id="disabilities">Individuals with disabilities are encouraged to attend all University of Iowa sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in this program, please contact the Center for Student Leadership and Involvement in advance at 319-335-3059.</div>
         
 	</div><!-- #footer -->
