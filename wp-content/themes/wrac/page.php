@@ -55,7 +55,7 @@
 				</div><!-- #post -->
     			
 	        
-				<div class="sb_header_link"><div><a href="#">Give to WRAC</a></div></div>
+				<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</div></div>
     			
 	        
 				<div class="sb_header"><div>Request Info</div></div>

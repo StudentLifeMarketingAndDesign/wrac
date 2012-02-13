@@ -53,14 +53,39 @@
 				</div>
 				<div id="col3">
 				<?php
-            	// action hook for placing content above the index loop
-            	thematic_above_indexloop();
 				
-            	// action hook creating the index loop
-            	thematic_indexloop();
+				while ( have_posts() ) : the_post();
+		
+				thematic_abovepost(); ?>
+
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+						echo '>';
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader(); ?>
+					<div class="entry-content">
+<?php the_excerpt(); ?>
+
+					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+					</div><!-- .entry-content -->
+					<?php //thematic_postfooter(); ?>
+				</div><!-- #post -->
+
+			<?php 
 				
-            	// action hook for placing content below the index loop
-            	thematic_below_indexloop();
+				thematic_belowpost();
+
+				if ($count==$thm_insert_position) {
+						get_sidebar('index-insert');
+				}
+				$count = $count + 1;
+		endwhile;
             	?>
 				</div>
 				<?php

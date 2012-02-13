@@ -145,4 +145,13 @@ if ( is_readable($locale_file) )
 	require_once($locale_file);
 
 
+// Excerpts
+
+function new_excerpt_more($more) {
+       global $post;
+	return '<a href="'. get_permalink($post->ID) . '">More...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+
 ?>
