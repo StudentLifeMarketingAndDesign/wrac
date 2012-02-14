@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Get The Facts Page
+Template Name: About WRAC Page
 */
 ?>
 <?php
@@ -55,48 +55,62 @@ Template Name: Get The Facts Page
 	                    wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
 	                    
 	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
-				
-				<div id="gtf_featured">
-				<?php
-				wp_reset_query();
-				query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 1 ) );
-				while ( have_posts() ) : the_post();
-				?>
-
-				<div id="post-<?php the_ID();
-					echo '" ';
-					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
-						post_class();
-						echo '>';
-					} else {
-						echo 'class="';
-						thematic_post_class();
-						echo '">';
-					}
-     				the_title('<h2 class="entry-title">Featured: <strong>','</strong></h2>')
-     				?>
-					<div class="entry-content">
-<?php thematic_content(); ?>
-
-					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-					</div><!-- .entry-content -->
-					<?php endwhile; ?>
-				</div><!-- #post -->
 	
 					</div><!-- .entry-content -->
-				</div><!-- #post --> 
-				</div>	        
+				</div><!-- #post --> 	        
     			
 	        
-				<div class="sb_header"><div>Topics</div></div>
-	        	<div class="sidebar">
-            	<?php wp_nav_menu( array('menu' => 'Topics' )); ?>
+				<div class="sb_header"><div>Contact Us</div></div>
+	        	<div class="sidebar"><h3>Women's Resources and Action Center</h3>
+	        	<p>
+	        	30 N. Madison St.<br />
+	        	Iowa City, IA 52245
+	        	</p>
+	        	<h3 style="float:left;">P: &nbsp;</h3>
+	        	<p style="float:left;margin:0;">(319) 335-1486</p>
+	        	<h3 style="float:left;">F: &nbsp;</h3>
+	        	<p style="float:left;margin:0;">(319) 353-1985</p>
+	        	<h3 style="float:left;">E: &nbsp;</h3>
+	        	<p style="float:left;">wrac@uiowa.edu</p>
+	        	<h3>Business Hours</h3>
+	        	<p>
+	        	Monday - Friday<br />
+	        	9:00 AM - 5:00 PM
+	        	</p>
 	        	</div>
     			
 	        
-				<div class="sb_header"><div>Partners</div></div>
+				<div class="sb_header"><div>Staff</div></div>
 	        	<div class="sidebar">
-            	<?php wp_nav_menu( array('menu' => 'Partners' )); ?>
+				<?php
+				$args = array( 'post_type' => 'staff', 'posts_per_page' => 99, 'order' => 'ASC' );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();
+					echo '<h3>';
+					the_title();
+					echo '</h3>';
+					echo '<div class="staff_descr">';
+					the_content();
+					echo '</div>';
+				endwhile;
+				?>
+	        	</div>
+    			
+	        
+				<div class="sb_header"><div>Advisory Board</div></div>
+	        	<div class="sidebar">
+				<?php
+				$args = array( 'post_type' => 'board', 'posts_per_page' => 99, 'order' => 'ASC' );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();
+					echo '<h3>';
+					the_title();
+					echo '</h3>';
+					echo '<div class="staff_descr">';
+					the_content();
+					echo '</div>';
+				endwhile;
+				?>
 	        	</div>
     	        
     	    <div style="clear:both;"></div>

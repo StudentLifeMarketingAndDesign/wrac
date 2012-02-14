@@ -12,6 +12,15 @@ body, input, textarea {
     line-height:22px;
 }
 
+#top{
+	width: 100%;
+	height:26px;
+	background-color: #000;
+	border-top: solid;
+	border-top-width: 3px;
+	border-top-color: #ffcc00;
+}
+
 #exit{
 	background-image: url('images/exit.gif');
 	position:fixed;
@@ -190,6 +199,7 @@ a:hover {
 	color:#f5714e;
 	font-size: 32px;
 	font-weight: lighter;
+	line-height: normal;
 }
 #content{
 	width:960px;
@@ -207,11 +217,30 @@ a:hover {
 }
 #slider{
 	width:960px;
-	height:478px;
+	height:440px;
 	background-color:#666;
 	margin: auto;
 	margin-bottom: 30px;
+	background-image: url('images/WRAC-02_blank.jpg');
+	background-position-y: center;
 }
+#slide_cont{
+	width: 300px;
+	float: right;
+	margin-top: 105px;
+	margin-right: 90px;
+}
+#slide_tit{
+	font: 55px 'Oswald', sans-serif;
+	font-weight: 800;
+	color: #712c91;
+}
+#slide_desc p{
+	font-size: 38px;
+	color: #b47cb6;
+	margin-left: 35px;
+}
+
 #col1{
 	background-color: #573d66;
 	width:270px;
@@ -219,6 +248,7 @@ a:hover {
 	padding: 10px;
 	margin-left: 5px;
 	border: 1px solid #896c95;
+	border-top: 0;
 }
 #col_head1{
 	width:302px;
@@ -240,6 +270,7 @@ a:hover {
 	margin-left: 37px;
 	padding: 10px;
 	border: 1px solid #896c95;
+	border-top: 0;
 }
 #col_head2{
 	width:302px;
@@ -260,6 +291,7 @@ a:hover {
 	padding: 10px;
 	margin-right: 5px;
 	border: 1px solid #896c95;
+	border-top: 0;
 }
 #col_head3{
 	width:302px;
@@ -294,6 +326,34 @@ a:hover {
 	margin-top: 80px;
 	margin-left: 40px;
 }
+
+#gtf_featured{
+	float: left;
+}
+
+.more_butt{
+	padding: 5px 10px;
+	background-color: #4c2f5b;
+	float: left;
+	font-family: Helvetica;
+	margin-bottom: 22px;
+	margin-top: -11px;
+	font-size: 18px;
+	margin-left: 7px;
+}
+
+.more_butt:hover{
+	background-color: #6b4d77;
+}
+
+.more_butt a{
+	text-decoration: none;
+}
+
+.more_butt a:hover{
+	color: #FFF;
+}
+
 #more-topics{
 	float: left
 	width: 960px;
@@ -302,7 +362,7 @@ a:hover {
 	font-family: 'Arvo', sans-serif;
 	font-size: 30px;
 	font-weight: lighter;
-	color: #FFF;
+	color: #e6d6ed;
 	padding-top: 20px;
 }
 #more-topics a{
@@ -385,6 +445,10 @@ a:hover {
 	font-weight: bold
 }
 
+#featured .more_butt{
+	margin-left: 0;
+}
+
 .entry-meta {
 	color:#8b6f96;
     font-size:13px;
@@ -419,6 +483,10 @@ a:hover {
 .entry-content {
 	color: #FFF;
     padding:22px 0 0 0;
+    float: left;
+}
+.entry-content p{
+    float: left;
 }
 #featured .entry-content{
 	color:#503759;
@@ -815,7 +883,7 @@ li.content-column {
 
 .sb_header div, .sb_header_link div{
 	font-family: 'arvo';
-	font-size: 28px;
+	font-size: 24px;
 	margin-top: 12px;
 	font-weight: lighter;
 }
@@ -833,10 +901,16 @@ li.content-column {
     margin-bottom:22px;
 	background-color: #573d66;
 	border: 1px solid #896c95;
+	border-top: none;
 	width:180px;
 	float: right;
 	margin-right: 4px;
 	clear: right;
+}
+
+.staff_descr{
+	color: #d5a19d;
+	margin-top: -5px;
 }
 
 .sidebar h3{

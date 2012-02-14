@@ -66,7 +66,6 @@
 	        	<h3>Phone:</h3>
 	        	<p>Please check to indicate need for a disability accommodation to participate.</p>
 	        	<h3>Other Comments or Questions:</h3>
-	        	</ul>
 	        	</div>
     			
 	        

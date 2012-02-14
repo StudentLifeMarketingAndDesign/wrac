@@ -516,7 +516,10 @@ if (function_exists('childtheme_override_featured_post'))  {
 	}
 } else {
 	function thematic_featured_post() {?>
-			
+	<?php
+				wp_reset_query();
+				query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 1 ) );
+	?>		
 				<div id="post-<?php the_ID();
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
@@ -529,7 +532,8 @@ if (function_exists('childtheme_override_featured_post'))  {
 					}?>
 					<h1 class="entry-title">Featured Article: <a href='<?php the_permalink() ?>' rel='bookmark' title='<?php the_title(); ?>'><?php the_title(); ?></a></h1>
 					<div class="entry-content">
-<?php thematic_content(); ?>
+<?php
+the_excerpt(); ?>
 
 						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
 					</div><!-- .entry-content -->

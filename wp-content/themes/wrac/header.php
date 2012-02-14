@@ -46,8 +46,12 @@
     
 ?>
 <link href='http://fonts.googleapis.com/css?family=Arvo:700,400italic,700italic,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
 
 </head>
+
+<div id="top"></div>
 
 <?php 
 
