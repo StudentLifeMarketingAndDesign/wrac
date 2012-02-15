@@ -908,9 +908,10 @@ li.content-column {
 	clear: right;
 }
 
-.staff_descr{
-	color: #d5a19d;
+.staff_descr p{
+	color: #ab88b9;
 	margin-top: -5px;
+	margin-bottom: 10px;
 }
 
 .sidebar h3{
