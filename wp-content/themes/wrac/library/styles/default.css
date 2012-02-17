@@ -454,7 +454,7 @@ a:hover {
 .entry-title {
     font-family:'Arvo',sans-serif;
     font-size:26px;
-    line-height:65px;
+    line-height:normal;
     padding:0 0 7px 0;
 }
 .entry-title a {
