@@ -7,7 +7,8 @@
     thematic_abovefooter();
     
     ?>    
-	
+	<div id="footwrap">
+	<div style="clear:both;"></div>
 	<div id="footer">
     
         <div id="find-us">
@@ -42,14 +43,15 @@
         </div>
         
         <div id="soc_med">
-        <div id="flickr"></div>
-        <div id="facebook"></div>
+        <a href="http://www.flickr.com/photos/uiowawrac/"><div id="flickr"></div></a>
+       <a href="https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625"><div id="facebook"></div></a> 
         <div id="twitter"></div>
         </div>
         
         <div id="disabilities">Individuals with disabilities are encouraged to attend all University of Iowa sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in this program, please contact the Center for Student Leadership and Involvement in advance at 319-335-3059.</div>
         
 	</div><!-- #footer -->
+	</div>
 
 <div style="clear:both;"></div>
 	

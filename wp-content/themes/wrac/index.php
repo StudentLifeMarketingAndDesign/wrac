@@ -85,44 +85,12 @@
             	?>
 				</div>
 				<div id="col2">
-				<?php
-				
-				while ( have_posts() ) : the_post();
-		
-				thematic_abovepost(); ?>
-
-				<div id="post-<?php the_ID();
-					echo '" ';
-					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
-						post_class();
-						echo '>';
-					} else {
-						echo 'class="';
-						thematic_post_class();
-						echo '">';
-					}
-     				thematic_postheader(); ?>
-					<div class="entry-content">
-<?php the_excerpt(); ?>
-
-					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
-					</div><!-- .entry-content -->
-					<?php //thematic_postfooter(); ?>
-				</div><!-- #post -->
-
-			<?php 
-				
-				thematic_belowpost();
-
-				if ($count==$thm_insert_position) {
-						get_sidebar('index-insert');
-				}
-				$count = $count + 1;
-		endwhile;
-            	?>
+            	<?php wp_nav_menu( array('menu' => 'Initiatives', 'walker' => new description_walker() ) ); ?>
 				</div>
 				<div id="col3">
 				<?php
+				wp_reset_query();
+				query_posts( array ( 'category_name' => 'events', 'posts_per_page' => 1 ) );
 				
 				while ( have_posts() ) : the_post();
 		

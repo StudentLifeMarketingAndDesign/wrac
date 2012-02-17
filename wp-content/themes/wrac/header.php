@@ -81,6 +81,9 @@ if (apply_filters('thematic_open_wrapper', true)) {
         </div>
         <div id="dome"></div>
         </div><!--  #branding -->
+
+	</div><!-- #header-->
+        <div id="navbar">
         <div id="access">
 	    		
 	    	<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
@@ -88,8 +91,7 @@ if (apply_filters('thematic_open_wrapper', true)) {
             	<?php wp_nav_menu( array('menu' => 'Primary' )); ?>
 	        
 		</div><!-- #access -->
-
-	</div><!-- #header-->
+		</div>
     <?php
     
     // action hook for placing content below the theme header
