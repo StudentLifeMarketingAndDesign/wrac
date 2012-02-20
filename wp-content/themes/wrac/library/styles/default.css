@@ -47,6 +47,11 @@ body, input, textarea {
 p, ul, ol, dd, pre {
     margin-bottom:22px;
 }
+
+a{
+	text-decoration: none;
+}
+
 pre, code {
 	font:14px Monaco, monospace;
 	line-height:22px;

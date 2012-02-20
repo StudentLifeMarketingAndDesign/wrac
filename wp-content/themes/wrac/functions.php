@@ -145,7 +145,6 @@ if ( is_readable($locale_file) )
 	require_once($locale_file);
 
 
-
 // Post Types
 
 add_action( 'init', 'create_post_type' );
@@ -178,9 +177,18 @@ function create_post_type() {
 			),
 		'public' => true,
 		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' )
 		)
 	);
 }
+
+
+// Post Thumbnails
+
+if ( function_exists( 'add_theme_support' ) ) {
+  add_theme_support( 'post-thumbnails', array( 'post', 'slider' ) );
+}
+
 
 // Excerpts
 
@@ -194,13 +202,6 @@ function custom_excerpt_length( $length ) {
 	return 28;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-
-// Post Thumbnails
-
-if ( function_exists( 'add_theme_support' ) ) { 
-  add_theme_support( 'post-thumbnails' ); 
-}
 
 // New Walker
 
