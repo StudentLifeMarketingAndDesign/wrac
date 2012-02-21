@@ -530,7 +530,7 @@ if (function_exists('childtheme_override_featured_post'))  {
 						thematic_post_class();
 						echo '">';
 					}?>
-					<h1 class="entry-title">Featured Article: <a href='<?php the_permalink() ?>' rel='bookmark' title='<?php the_title(); ?>'><?php the_title(); ?></a></h1>
+					<h1 class="entry-title">Featured Article: <a href='<?php the_permalink() ?>'  onclick="location.replace('<?php the_permalink() ?>'); return false;" rel='bookmark' title='<?php the_title(); ?>'><?php the_title(); ?></a></h1>
 					<div class="entry-content">
 <?php
 the_excerpt(); ?>
@@ -708,7 +708,7 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	    } else {
 	        $posttitle = '<h2 class="entry-title"><a href="';
 	        $posttitle .= apply_filters('the_permalink', get_permalink());
-	        $posttitle .= '" title="';
+	        $posttitle .= '" onclick="location.replace(\''.apply_filters('the_permalink', get_permalink()).'\'); return false;" title="';
 	        $posttitle .= __('Permalink to ', 'thematic') . the_title_attribute('echo=0');
 	        $posttitle .= '" rel="bookmark">';
 	        $posttitle .= get_the_title();   

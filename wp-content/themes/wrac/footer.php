@@ -27,24 +27,24 @@
         <div id="house"></div>
         <div id="services">
         <h3>Services</h3>
-            	<?php wp_nav_menu( array('menu' => 'Services' )); ?>
+            	<?php wp_nav_menu( array('menu' => 'Services',  'walker' => new description_walker() )); ?>
         </div>
         <div id="events">
         <h3>Events</h3>
-            	<?php wp_nav_menu( array('menu' => 'Events' )); ?>
+            	<?php wp_nav_menu( array('menu' => 'Events',  'walker' => new description_walker() )); ?>
         </div>
         <div id="get-involved">
         <h3>Get Involved</h3>
-            	<?php wp_nav_menu( array('menu' => 'Get Involved' )); ?>
+            	<?php wp_nav_menu( array('menu' => 'Get Involved',  'walker' => new description_walker() )); ?>
         </div>
         <div id="resources">
         <h3>Resources</h3>
-            	<?php wp_nav_menu( array('menu' => 'Resources' )); ?>
+            	<?php wp_nav_menu( array('menu' => 'Resources',  'walker' => new description_walker() )); ?>
         </div>
         
         <div id="soc_med">
-        <a href="http://www.flickr.com/photos/uiowawrac/"><div id="flickr"></div></a>
-       <a href="https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625"><div id="facebook"></div></a> 
+        <a href="http://www.flickr.com/photos/uiowawrac/" onclick="location.replace('http://www.flickr.com/photos/uiowawrac/'); return false;"><div id="flickr"></div></a>
+       <a href="https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625" onclick="location.replace('https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625'); return false;"><div id="facebook"></div></a> 
         <div id="twitter"></div>
         </div>
         

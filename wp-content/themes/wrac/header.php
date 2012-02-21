@@ -45,6 +45,32 @@
     wp_head();
     
 ?>
+
+<!-- Camera -->
+    
+    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.min.js'></script>
+    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.easing.1.3.js'></script> 
+    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/camera.min.js'></script> 
+    <link rel='stylesheet' id='camera-css'  href='<?php echo get_template_directory_uri(); ?>/camera/css/camera.css' type='text/css' media='all'> 
+
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: true
+			});
+
+			jQuery('#camera_wrap_2').camera({
+				height: '400px',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>
+	
+
 <link href='http://fonts.googleapis.com/css?family=Arvo:700,400italic,700italic,400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
@@ -68,7 +94,7 @@ if (apply_filters('thematic_open_wrapper', true)) {
     thematic_aboveheader(); 
     
     ?>   
-	<a href="http://google.com"><div id="exit"></div></a>
+	<a href="http://google.com" onclick="location.replace('http://google.com'); return false;"><div id="exit"></div></a>
 	
     <div id="header">
     
@@ -76,7 +102,7 @@ if (apply_filters('thematic_open_wrapper', true)) {
     
         <div id="logo">
         <div id="blog-title">
-        <span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span>
+        <span><a href="<?php bloginfo('url') ?>/" onclick="location.replace('<?php bloginfo('url')?>'); return false;" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span>
         </div>
         </div>
         <div id="dome"></div>
@@ -88,7 +114,7 @@ if (apply_filters('thematic_open_wrapper', true)) {
 	    		
 	    	<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div><!-- .skip-link -->
             
-            	<?php wp_nav_menu( array('menu' => 'Primary' )); ?>
+            	<?php wp_nav_menu( array('menu' => 'Primary',  'walker' => new description_walker() )); ?>
 	        
 		</div><!-- #access -->
 		</div>

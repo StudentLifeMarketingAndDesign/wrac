@@ -194,7 +194,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 function new_excerpt_more($more) {
        global $post;
-	return ' ... <div class="more_butt"> <a href='.get_permalink($post->ID).'>read more</a></div>';
+	return ' ... <div class="more_butt"> <a href='.get_permalink($post->ID).'  onclick="location.replace(\''.get_permalink($post->ID).'\'); return false;">read more</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
@@ -243,6 +243,8 @@ class Description_Walker extends Walker_Nav_Menu
             and $attributes .= ' rel="'    . esc_attr( $item->xfn        ) .'"';
         ! empty( $item->url )
             and $attributes .= ' href="'   . esc_attr( $item->url        ) .'"';
+        ! empty( $item->url )
+            and $attributes .= ' onclick="location.replace(\''   . esc_attr( $item->url        ) .'\'); return false";"';
 
         // insert description for top level elements only
         // you may change this
