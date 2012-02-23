@@ -143,14 +143,19 @@
 	width: 120px;
 	z-index: 4;
 }
-.camera_caption {
-	bottom: 0;
-	display: block;
-	position: absolute;
-	width: 100%;
+.camera_caption_right {
+	width: 380px;
+	float: right;
+	margin-top: 105px;
+	margin-right: 50px;
+}
+.camera_caption_left {
+	width: 380px;
+	float: left;
+	margin-top: 105px;
+	margin-left: 50px;
 }
 .camera_caption > div {
-	padding: 10px 20px;
 }
 .camerarelative {
 	overflow: hidden;
@@ -419,13 +424,6 @@
 }
 .pattern_10 .camera_overlayer {
 	background: url(../images/patterns/overlay10.png) repeat;
-}
-.camera_caption {
-	color: #fff;
-}
-.camera_caption > div {
-	background: #000;
-	background: rgba(0, 0, 0, 0.8);
 }
 .camera_wrap .camera_pag .camera_pag_ul li {
 	background: #b7b7b7;

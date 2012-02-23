@@ -51,7 +51,7 @@
     <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.min.js'></script>
     <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.mobile.customized.min.js'></script>
     <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.easing.1.3.js'></script> 
-    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/camera.min.js'></script> 
+    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/camera.js'></script> 
     <link rel='stylesheet' id='camera-css'  href='<?php echo get_template_directory_uri(); ?>/camera/css/camera.css' type='text/css' media='all'> 
 
     <script>

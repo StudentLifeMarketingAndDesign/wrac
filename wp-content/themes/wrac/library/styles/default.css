@@ -236,22 +236,16 @@ a:hover {
 	background-color:#666;
 	margin: auto;
 	margin-bottom: 30px;
-	background-image: url('images/WRAC-02_blank.jpg');
+/*	background-image: url('images/WRAC-02_blank.jpg');*/
 	background-position-y: center;
 }
-#slide_cont{
-	width: 300px;
-	float: right;
-	margin-top: 105px;
-	margin-right: 90px;
-}
-#slide_tit{
+.slide_title{
 	font: 55px 'Oswald', sans-serif;
 	font-weight: 800;
 	color: #712c91;
 }
-#slide_desc p{
-	font-size: 38px;
+.slide_descr p{
+	font-size: 30px;
 	color: #b47cb6;
 	margin-left: 35px;
 }
