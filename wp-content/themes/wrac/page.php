@@ -58,15 +58,10 @@
 				<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</div></div>
     			
 	        
-				<div class="sb_header"><div>Request Info</div></div>
+				<!--<div class="sb_header"><div>Request Info</div></div>
 	        	<div class="sidebar">
-	        	<h3>Want to volunteer with WRAC? Sign up here.</h3>
-	        	<h3>Name:</h3>
-	        	<h3>E-mail:</h3>
-	        	<h3>Phone:</h3>
-	        	<p>Please check to indicate need for a disability accommodation to participate.</p>
-	        	<h3>Other Comments or Questions:</h3>
-	        	</div>
+	        	<?php echo do_shortcode( '[contact-form-7 id="179" title="Request Info"]' ); ?>
+	        	</div>-->
     			
 	        
 				<div class="sb_header"><div>Resources</div></div>

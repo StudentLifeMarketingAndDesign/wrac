@@ -19,8 +19,8 @@
 				$args = array( 'post_type' => 'slider', 'posts_per_page' => 99, 'order' => 'ASC' );
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();
-   					$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-					echo '<div data-thumb="'.$large_image_url[0].'" data-src="'.$large_image_url[0].'">';
+   					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+					echo '<div data-src="'.$image[0].'">';
 					echo '<div class="camera_caption_';
 					echo get_post_meta($post->ID, 'alignment', true);
 					echo ' fadeFromBottom"><div class="slide_title">';

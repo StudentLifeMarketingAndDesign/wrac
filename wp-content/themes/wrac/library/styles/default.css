@@ -8,8 +8,12 @@ body {
 }
 
 body, input, textarea {
-    font:15px Georgia,serif;
+    font-size:14px;
     line-height:22px;
+}
+
+input{
+	color: #000;
 }
 
 #top{
@@ -24,7 +28,7 @@ body, input, textarea {
 #navbar{
 	width: 100%;
     background-image: url('images/bg.png');
-	height: 100%;
+	height: 50px;
 	clear: both;
 	margin-bottom: 20px;
 }
@@ -173,13 +177,13 @@ a:hover {
 	float:left;
 	margin-left: 28px;
 	margin-right: 29px;
-	margin-top:-4px;
+	margin-top:-6px;
 }
 
 #access a, #access a:visited  { /* visited pseudo selector so IE6 applies text colour*/
 	font-family: 'Arvo', sans-serif;
 	color:	#fff;
-	font-size: 22px;
+	font-size: 18px;
 	text-decoration: none;
 }
 #access a:hover{
@@ -201,7 +205,7 @@ a:hover {
 #page_content{
 	width:960px;
 	margin: auto;
-    padding: 20px;
+    padding: 20px 40px;
     background-image: url('images/bg.png');
 }
 #page_content h1{
@@ -233,10 +237,9 @@ a:hover {
 #slider{
 	width:960px;
 	height:440px;
-	background-color:#666;
+/*	background-color:#666;*/
 	margin: auto;
 	margin-bottom: 30px;
-/*	background-image: url('images/WRAC-02_blank.jpg');*/
 	background-position-y: center;
 }
 .slide_title{
@@ -255,12 +258,12 @@ a:hover {
 	width:270px;
 	float: left;
 	padding: 10px;
-	margin-left: 5px;
+	margin-left: 10px;
 	border: 1px solid #896c95;
 	border-top: 0;
 }
 #col_head1{
-	width:302px;
+	width:312px;
 	height: 85px;
 	float: left;
 	margin-left: 0px;
@@ -276,7 +279,7 @@ a:hover {
 	background-color: #573d66;
 	width:270px;
 	float: left;
-	margin-left: 37px;
+	margin-left: 32px;
 	padding: 10px;
 	border: 1px solid #896c95;
 	border-top: 0;
@@ -301,10 +304,10 @@ a:hover {
 	width: 256px;
 }
 #col_head2{
-	width:302px;
+	width:312px;
 	height: 85px;
 	float: left;
-	margin-left: 27px;
+	margin-left: 12px;
 	background-color: #f5714e;
 	text-align: center;
 }
@@ -317,12 +320,12 @@ a:hover {
 	width:270px;
 	float: right;
 	padding: 10px;
-	margin-right: 5px;
+	margin-right: 10px;
 	border: 1px solid #896c95;
 	border-top: 0;
 }
 #col_head3{
-	width:302px;
+	width:312px;
 	height: 85px;
 	float: right;
 	margin-right: 0px;
@@ -513,9 +516,6 @@ a:hover {
     padding:22px 0 0 0;
     float: left;
 }
-.entry-content p{
-    float: left;
-}
 #featured .entry-content{
 	color:#503759;
 }
@@ -523,12 +523,9 @@ a:hover {
 .entry-content h2 {
     font-size:19px;
     font-weight:bold;
-    padding:28px 0 14px 0;
 }
 .entry-content h3 {
     font-size:17px;
-    font-style:italic;
-    padding:28px 0 14px 0;
 }
 .entry-content h4 {
     font-size:11px;
@@ -769,18 +766,15 @@ li.content-column {
     padding:9px 0 0 46px;
 }
 #comments-list .comment-meta {
-    color:#fff;
     font-size:11px;
     padding:0 0 9px 46px;
 }
 #comments-list .comment-meta a {
-    color:#fff;
     font-style:italic;
     text-decoration:none;
 }
 #comments-list .comment-meta a:active,
 #comments-list .comment-meta a:hover {
-    color: #ff8a33;
 }
 .comment-reply-link {
     font-size:11px;
@@ -788,13 +782,11 @@ li.content-column {
     text-align:right;
 }
 .comment-reply-link a {
-    color:#fff;
     font-style:italic;
     text-decoration:none;
 }
 .comment-reply-link a:active,
 .comment-reply-link a:hover {
-    color: #ff8a33;
 }
 .comment-navigation {
     font-weight:bold;
@@ -803,14 +795,12 @@ li.content-column {
 }
 .comment-navigation a {
     border:1px solid #ccc;
-    color:#fff;
     font-weight:normal;
     padding:0.5em 0.75em;
     text-decoration:none;
 }
 .comment-navigation a:active,
 .comment-navigation a:hover {
-    color: #ff8a33;
 }
 .comment-navigation a,
 .comment-navigation span {
@@ -843,7 +833,6 @@ li.content-column {
     right:1.5em;
 }
 #cancel-comment-reply a {
-    color:#fff;
 }
 #respond .required {
     color:#ff8a33;
@@ -860,7 +849,6 @@ li.content-column {
     width:99%;
 }
 #form-allowed-tags p {
-    color:#fff;
     font-size:11px;
     margin:0;    
 }
@@ -876,25 +864,24 @@ li.content-column {
     text-align:right;
 }
 .subscribe-to-comments {
-    color:#fff;
     float:left;
     font-size:11px;
     margin:0;
     padding:18px 0 0 0;
 }
 .solo-subscribe-to-comments {
-    color:#fff;
     font-size:11px;
     padding:18px 0 0 0;
 }
 .comment_license {
-    color:#fff;
     clear:both;
     font-size:11px;
     margin:0;
     padding:18px 0 0 0;
 }
-
+span.wpcf7-list-item-label{
+	margin-left: -0.5em;
+}
 
 /* =Asides, Sidebars & Widget-Ready Areas
 -------------------------------------------------------------- */
@@ -1123,6 +1110,57 @@ li.content-column {
 
 /* =Footer
 -------------------------------------------------------------- */
+
+#fancybox{
+	display: none;
+	opacity:0.95;
+	position: fixed;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	margin-top: -287px;
+	margin-left: -200px;
+	width: 400px;
+	background-color: #2B2B2B;
+	padding: 25px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0px 6px 12px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 6px 12px rgba(0,0,0,.5);
+	box-shadow: 0px 6px 12px rgba(0,0,0,.5);
+}
+
+#fancyexit{
+	width: 29px;
+	height: 29px;
+	background-image: url('images/x.png');
+	position: absolute;
+	margin-left: 406px;
+	margin-top: -31px;
+}
+
+#showFancy{
+	background-color: #F5714E;
+	width: 305px;
+	font-size: 30px;
+	padding: 15px;
+	font-family: 'Arvo', sans-serif;
+	margin-bottom: 20px;
+	margin-top: -35px;
+	margin-left: 20px;
+}
+
+#showFancy:hover{	
+	background-color: #ffbb58;
+}
+
+#showFancy a:hover{
+	color: #fff;
+}
+
+span.wpcf7-not-valid-tip{
+	color: red;
+}
 
 #footwrap{
 	width: 100%;

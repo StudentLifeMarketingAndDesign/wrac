@@ -6,10 +6,15 @@
      
 -------------------------------------------------------------- */   
 
-body, input, textarea {
+body{
     color:#FFF;    
     font: 18px helvetica, sans-serif;
     line-height:18px;
+}
+
+input, textarea {
+	color: #000;
+	font-family: Verdana, sans-serif;
 }
 
 /* Headings

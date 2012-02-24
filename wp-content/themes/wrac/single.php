@@ -45,18 +45,6 @@
 				<div class="sb_header_link"><div><a href="#">Give to WRAC</a></div></div>
     			
 	        
-				<div class="sb_header"><div>Request Info</div></div>
-	        	<div class="sidebar">
-	        	<h3>Want to volunteer with WRAC? Sign up here.</h3>
-	        	<h3>Name:</h3>
-	        	<h3>E-mail:</h3>
-	        	<h3>Phone:</h3>
-	        	<p>Please check to indicate need for a disability accommodation to participate.</p>
-	        	<h3>Other Comments or Questions:</h3>
-	        	</ul>
-	        	</div>
-    			
-	        
 				<div class="sb_header"><div>Resources</div></div>
 	        	<div class="sidebar">
 	        	<ul>

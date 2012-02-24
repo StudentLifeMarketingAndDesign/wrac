@@ -10,7 +10,7 @@
 	<div id="footwrap">
 	<div style="clear:both;"></div>
 	<div id="footer">
-    
+    	<div id="showFancy"><a href="javascript:showFancy();">Request Information</a></div>
         <div id="find-us">
         <h3>Find Us</h3>
         <h4>
@@ -26,26 +26,26 @@
         </div>
         <div id="house"></div>
         <div id="services">
-        <h3>Services</h3>
+        <h3><a href="services/">Services</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Services',  'walker' => new description_walker() )); ?>
         </div>
         <div id="events">
-        <h3>Events</h3>
+        <h3><a href="events/">Events</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Events',  'walker' => new description_walker() )); ?>
         </div>
         <div id="get-involved">
-        <h3>Get Involved</h3>
+        <h3><a href="get-involved/">Get Involved</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Get Involved',  'walker' => new description_walker() )); ?>
         </div>
         <div id="resources">
-        <h3>Resources</h3>
+        <h3><a href="resources/">Resources</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Resources',  'walker' => new description_walker() )); ?>
         </div>
         
         <div id="soc_med">
-        <a href="http://www.flickr.com/photos/uiowawrac/" onclick="location.replace('http://www.flickr.com/photos/uiowawrac/'); return false;"><div id="flickr"></div></a>
-       <a href="https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625" onclick="location.replace('https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625'); return false;"><div id="facebook"></div></a> 
-        <div id="twitter"></div>
+        <a href="http://www.flickr.com/photos/uiowawrac/"><div id="flickr"></div></a>
+        <a href="https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625"><div id="facebook"></div></a> 
+        <a href="http://twitter.com/#!/wracatuiowa"><div id="twitter"></div></a>
         </div>
         
         <div id="disabilities">Individuals with disabilities are encouraged to attend all University of Iowa sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in this program, please contact the Center for Student Leadership and Involvement in advance at 319-335-3059.</div>

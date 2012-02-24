@@ -26,7 +26,7 @@
 
 		gridDifference		: 250,	//to make the grid blocks slower than the slices, this value must be smaller than transPeriod
 		
-		height				: '50%',	//here you can type pixels (for instance '300px'), a percentage (relative to the width of the slideshow, for instance '50%') or 'auto'
+		height				: '440px',	//here you can type pixels (for instance '300px'), a percentage (relative to the width of the slideshow, for instance '50%') or 'auto'
 		
 		imagePath			: 'images/',	//he path to the image folder (it serves for the blank.gif, when you want to display videos)
 		
@@ -52,7 +52,7 @@
 		
 		opacityOnGrid		: false,	//true, false. Decide to apply a fade effect to blocks and slices: if your slideshow is fullscreen or simply big, I recommend to set it false to have a smoother effect 
 		
-		overlayer			: true,	//a layer on the images to prevent the users grab them simply by clicking the right button of their mouse (.camera_overlayer)
+		overlayer			: false,	//a layer on the images to prevent the users grab them simply by clicking the right button of their mouse (.camera_overlayer)
 		
 		pagination			: true,
 		

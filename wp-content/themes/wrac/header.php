@@ -58,16 +58,17 @@
 		jQuery(function(){
 			
 			jQuery('#camera_wrap_1').camera({
-				thumbnails: true
-			});
-
-			jQuery('#camera_wrap_2').camera({
-				height: '400px',
-				loader: 'bar',
-				pagination: false,
-				thumbnails: true
+				thumbnails: false
 			});
 		});
+		
+		function showFancy() {
+			jQuery('#fancybox').fadeIn('slow');
+		}
+		
+		function hideFancy() {
+			jQuery('#fancybox').fadeOut('fast');
+		}
 	</script>
 	
 
@@ -79,6 +80,12 @@
 
 <div id="top"></div>
 
+	
+	<div id="fancybox">
+	<div id="fancyexit" onclick="hideFancy();" style="cursor:pointer;"></div>
+	<?php echo do_shortcode( '[contact-form-7 id="179" title="Request Info"]' ); ?>
+	</div>
+
 <?php 
 
 thematic_body();
@@ -87,7 +94,7 @@ thematic_body();
 thematic_before(); 
 
 if (apply_filters('thematic_open_wrapper', true)) {
-	echo '<div id="wrapper" class="hfeed">';
+	echo '<div id="wrapper" class="hfeed" onclick="hideFancy();">';
 }
     
     // action hook for placing content above the theme header
@@ -102,7 +109,8 @@ if (apply_filters('thematic_open_wrapper', true)) {
     
         <div id="logo">
         <div id="blog-title">
-        <span><a href="<?php bloginfo('url') ?>/" onclick="location.replace('<?php bloginfo('url')?>'); return false;" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span>
+        <!--<span><a href="<?php bloginfo('url') ?>/" onclick="location.replace('<?php bloginfo('url')?>'); return false;" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span>-->
+        <span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span>
         </div>
         </div>
         <div id="dome"></div>
