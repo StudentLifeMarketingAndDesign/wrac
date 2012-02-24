@@ -42,6 +42,10 @@ input{
 	z-index: 101;
 }
 
+#exit:hover{
+	background-position-y: 196px;
+}
+
 #wrapper{
 	border-left: solid 3px;
 	border-left-color: #71598c;
