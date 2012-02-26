@@ -205,7 +205,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 function new_excerpt_more($more) {
        global $post;
-	return ' ... <div class="more_butt"> <a href='.get_permalink($post->ID).'>read more</a></div>';
+	return ' ... <div class="more_butt" onclick="location.href=\''.get_permalink($post->ID).'\'" style="cursor:pointer;"> <a href='.get_permalink($post->ID).'>read more</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

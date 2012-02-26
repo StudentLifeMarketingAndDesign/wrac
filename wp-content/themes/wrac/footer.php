@@ -10,7 +10,7 @@
 	<div id="footwrap">
 	<div style="clear:both;"></div>
 	<div id="footer">
-    	<div id="showFancy"><a href="javascript:showFancy();">Request Information</a></div>
+    	<div id="showFancy" onclick="location.href='javascript:showFancy();';" style="cursor:pointer;">Request Information</div>
         <div id="find-us">
         <h3>Find Us</h3>
         <h4>
@@ -52,8 +52,6 @@
         
 	</div><!-- #footer -->
 	</div>
-
-<div style="clear:both;"></div>
 	
     <?php
     
