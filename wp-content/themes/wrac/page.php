@@ -38,7 +38,13 @@
 	                
 	                // creating the post header
 	                thematic_postheader();
-	                
+	              	
+	              	echo "<div id='page_thumb'>";
+	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+					  the_post_thumbnail();
+					}
+					echo "</div>";
+?>
 	                ?>
 	                
 					<div class="entry-content">

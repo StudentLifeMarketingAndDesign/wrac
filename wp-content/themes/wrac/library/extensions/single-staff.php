@@ -1,9 +1,4 @@
 <?php
-/*
-Template Name: About WRAC Page
-*/
-?>
-<?php
 
     // calling the header.php
     get_header();
@@ -44,12 +39,12 @@ Template Name: About WRAC Page
 	                // creating the post header
 	                thematic_postheader();
 	              	
-	              	echo "<div id='page_thumb'>";
+	              	echo "<div id='staff_pic'>";
 	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 					  the_post_thumbnail();
 					}
 					echo "</div>";
-	                
+?>
 	                ?>
 	                
 					<div class="entry-content">
@@ -63,68 +58,27 @@ Template Name: About WRAC Page
 	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
 	
 					</div><!-- .entry-content -->
-				</div><!-- #post --> 	        
+				</div><!-- #post -->
     			
 	        
-				<div class="sb_header"><div>Contact Us</div></div>
-	        	<div class="sidebar"><h3>Women's Resources and Action Center</h3>
-	        	<p>
-	        	30 N. Madison St.<br />
-	        	Iowa City, IA 52245
-	        	</p>
-	        	<h3 style="float:left;">P: &nbsp;</h3>
-	        	<p style="float:left;margin:0;">(319) 335-1486</p>
-	        	<h3 style="float:left;">F: &nbsp;</h3>
-	        	<p style="float:left;margin:0;">(319) 353-1985</p>
-	        	<h3 style="float:left;">E: &nbsp;</h3>
-	        	<p style="float:left;">wrac@uiowa.edu</p>
-	        	<h3>Business Hours</h3>
-	        	<p>
-	        	Monday - Friday<br />
-	        	9:00 AM - 5:00 PM
-	        	</p>
-	        	</div>
+				<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</div></div>
     			
 	        
-				<div class="sb_header"><div>Staff</div></div>
+				<!--<div class="sb_header"><div>Request Info</div></div>
 	        	<div class="sidebar">
-				<?php
-				$args = array( 'post_type' => 'staff', 'posts_per_page' => 99, 'order' => 'ASC' );
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post();
-					echo '<h3>';
-					?>
-					<a href='<?php the_permalink() ?>'>
-					<?php
-					the_title();
-					echo '</a>';
-					echo '</h3>';
-					echo '<div class="staff_descr">';
-					the_excerpt();
-					echo '</div>';
-				endwhile;
-				?>
-	        	</div>
+	        	<?php echo do_shortcode( '[contact-form-7 id="179" title="Request Info"]' ); ?>
+	        	</div>-->
     			
 	        
-				<div class="sb_header"><div>Advisory Board</div></div>
+				<div class="sb_header"><div>Resources</div></div>
 	        	<div class="sidebar">
-				<?php
-				$args = array( 'post_type' => 'board', 'posts_per_page' => 99, 'order' => 'ASC' );
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post();
-					echo '<h3>';
-					?>
-					<a href='<?php the_permalink() ?>'>
-					<?php
-					the_title();
-					echo '</a>';
-					echo '</h3>';
-					echo '<div class="staff_descr">';
-					the_excerpt();
-					echo '</div>';
-				endwhile;
-				?>
+	        	<ul>
+	        	<li>Volunteer Application</li>
+	        	<li>Volunteer Brochure</li>
+	        	<li>Diversity Dialogue Leader Application</li>
+	        	<li>Group Facilitator Application</li>
+	        	<li>IWIS Application</li>
+	        	</ul>
 	        	</div>
     	        
     	    <div style="clear:both;"></div>
