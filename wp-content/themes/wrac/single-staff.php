@@ -36,28 +36,35 @@
 						echo '">';
 					}
 	                
-	                // creating the post header
-	                thematic_postheader();
-	              	
-	              	echo "<div id='staff_pic'>";
-	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-					  the_post_thumbnail();
-					}
-					echo "</div>";
-?>
-	                ?>
+	                echo '<h1 class="entry-title">';
+	                the_title();
+	                echo '</h1>';
+				?>
 	                
-					<div class="entry-content">
-	
+					<div id="staff_descr">
+					<?php
+						the_excerpt();
+					?>
+					</div>
+				
+				<div id="staff_bio">
 	                    <?php
 	                    
 	                    the_content();
 	                    
 	                    wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
 	                    
-	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
-	
-					</div><!-- .entry-content -->
+	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>');
+	              	
+	           		   	echo "<div id='staff_pic'>";
+	         	 	    if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+							the_post_thumbnail('staff');
+						}
+						echo "</div>";
+						?>
+						<?php the_meta(); ?>
+				</div>
+					
 				</div><!-- #post -->
     			
 	        

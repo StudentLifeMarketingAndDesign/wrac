@@ -42,7 +42,7 @@
 	              	
 	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	                	echo "<div id='page_thumb'>";
-						the_post_thumbnail();
+						the_post_thumbnail('large');
 						echo "</div>";
 					}
 ?>

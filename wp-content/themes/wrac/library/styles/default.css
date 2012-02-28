@@ -948,19 +948,25 @@ span.wpcf7-list-item-label{
 	clear: right;
 }
 
-.staff_descr p{
+.staff_descr{
 	color: #ab88b9;
 	margin-top: -5px;
 	margin-bottom: 10px;
 }
 
+#staff_descr{
+	color: #ab88b9;
+	margin-bottom: 10px;
+}
+
 #staff_pic{
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 300px;
     border: 5px solid #F5714E;
 	-moz-box-shadow: 0px 7px 12px rgba(0,0,0,.5);
 	-webkit-box-shadow: 0px 7px 12px rgba(0,0,0,.5);
 	box-shadow: 0px 7px 12px rgba(0,0,0,.5);
+	float: right;
 }
 
 .sidebar h3{
@@ -1183,13 +1189,21 @@ span.wpcf7-list-item-label{
 	margin-top: -35px;
 	margin-left: 20px;
 	text-shadow: none;
-	-moz-box-shadow: 0px 6px 5px rgba(0,0,0,.3);
-	-webkit-box-shadow: 0px 6px 5px rgba(0,0,0,.3);
-	box-shadow: 0px 6px 5px rgba(0,0,0,.3);
+	-moz-box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+	box-shadow: 0px 2px 3px rgba(0,0,0,.3);
 }
 
 #showFancy:hover{	
+	width:318px;
+	height: 23px;
+	margin-bottom: 19px;
+	margin-left: 14px;
+	font-size: 31px;
 	background-color: #ffbb58;
+	-moz-box-shadow: 0px 6px 5px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 6px 5px rgba(0,0,0,.3);
+	box-shadow: 0px 6px 5px rgba(0,0,0,.3);
 }
 
 #showFancy a:hover{

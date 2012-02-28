@@ -191,6 +191,7 @@ function create_post_type() {
 if ( !function_exists('AddThumbColumn') && function_exists('add_theme_support') ) {
     // for post and page
     add_theme_support('post-thumbnails', array( 'post', 'page', 'slider', 'staff', 'board' ) );
+    add_image_size( 'staff', 300, 300, true );
     function AddThumbColumn($cols) {
         $cols['thumbnail'] = __('Thumbnail');
         return $cols;
@@ -248,6 +249,10 @@ function custom_excerpt_length( $length ) {
 	return 28;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+remove_filter('the_content','ec3_filter_the_content',20);
+remove_filter('get_the_excerpt', 'ec3_get_the_excerpt');
+add_filter('get_the_excerpt', 'wp_trim_excerpt');
 
 // New Walker
 
