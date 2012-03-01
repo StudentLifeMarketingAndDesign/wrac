@@ -55,15 +55,24 @@
 	                    wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
 	                    
 	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>');
-	              	
-	           		   	echo "<div id='staff_pic'>";
+						?>
+				</div>
+				<?php
+						echo "<div id='staff_pic'>";
 	         	 	    if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 							the_post_thumbnail('staff');
 						}
 						echo "</div>";
+				?>
+					<div id="staff_inf">
+						<?php
+						$email = get_post_meta($post->ID, 'email', true);
+						$phone = get_post_meta($post->ID,
+						 'phone', true);
+						echo '<div class="item"><span class="descr">email</span><a href="mailto:' . $email . '">' . $email . '</a></div>';
+						echo '<div class="item"><span class="descr">phone</span>' . $phone . '</div>';
 						?>
-						<?php the_meta(); ?>
-				</div>
+					</div>
 					
 				</div><!-- #post -->
     			

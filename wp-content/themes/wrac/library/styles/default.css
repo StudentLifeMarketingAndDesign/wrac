@@ -954,9 +954,35 @@ span.wpcf7-list-item-label{
 	margin-bottom: 10px;
 }
 
-#staff_descr{
+#staff_descr p{
 	color: #ab88b9;
-	margin-bottom: 10px;
+	margin-top: -10px;
+	margin-bottom: 30px;
+	font-family: 'arvo', sans-serif;
+	font-size: 18px;
+}
+#staff_bio{
+	width: 320px;
+	float: left;
+	text-align: justify;
+}
+
+#staff_inf{
+	float: right;
+	width: 310px;
+	margin-top: 20px;
+	font-family: 'arvo', sans-serif;
+	font-size: 18px;
+}
+
+.item{
+	float: left;
+	float: left;
+}
+
+span.descr {
+	color: #ab88b9;
+	margin-right: 7px;
 }
 
 #staff_pic{
@@ -1147,6 +1173,33 @@ span.wpcf7-list-item-label{
     padding:33px 0 0 0;    
 }
 
+/*
+	Event Calendar
+*/
+.ec3_list{
+	list-style: none;
+	margin-bottom: 25px;
+	color:#8b6f96 !important;
+    font-size:13px;
+    font-family:'arvo';
+    line-height:18px;
+	font-weight: lighter;
+}
+
+.ec3_events ul{
+	list-style: none;
+	margin-left: 0;
+}
+
+.ec3_events li{
+}
+
+.ec3_events li a{
+    font-family:'Arvo',sans-serif;
+    font-size:21px;
+    line-height:normal;
+    margin-left: 0;
+}
 
 /* =Footer
 -------------------------------------------------------------- */
@@ -1200,10 +1253,9 @@ span.wpcf7-list-item-label{
 	margin-bottom: 19px;
 	margin-left: 14px;
 	font-size: 31px;
-	background-color: #ffbb58;
-	-moz-box-shadow: 0px 6px 5px rgba(0,0,0,.3);
-	-webkit-box-shadow: 0px 6px 5px rgba(0,0,0,.3);
-	box-shadow: 0px 6px 5px rgba(0,0,0,.3);
+	-moz-box-shadow: 0px 4px 5px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 4px 5px rgba(0,0,0,.3);
+	box-shadow: 0px 4px 5px rgba(0,0,0,.3);
 }
 
 #showFancy a:hover{

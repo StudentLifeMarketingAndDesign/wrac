@@ -3,30 +3,14 @@
 Template Name: Archives Page
 */
 ?>
-<?php
 
-    // calling the header.php
-    get_header();
-
-    // action hook for placing content above #container
-    thematic_abovecontainer();
-
-?>	
 		<div id="container">
-		
+			
 			<?php thematic_abovecontent(); ?>
+			
+			<div id="page_content">
 		
-			<div id="content">
-	
-	            <?php 
-	            
-	            the_post();
-	            
-	            thematic_abovepost();
-	            
-	            ?>
-	
-				<div id="post-<?php the_ID();
+    	        <div id="post-<?php the_ID();
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();
@@ -57,37 +41,34 @@ Template Name: Archives Page
 	
 					</div><!-- .entry-content -->
 				</div><!-- #post -->
-	
-	        <?php
+    			
 	        
-	        thematic_belowpost();
+				<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</a></div></div>
+    			
 	        
-	        // calling the comments template
-	        	// calling the comments template
-        		if (THEMATIC_COMPATIBLE_COMMENT_HANDLING) {
-       				if ( get_post_custom_values('comments') ) {
-						// Add a key/value of "comments" to enable comments on pages!
-	        			thematic_comments_template();
-        			}
-        		} else {
-       				thematic_comments_template();
-        		}
-	        
-	        ?>
-	
-			</div><!-- #content -->
+				<div class="sb_header"><div>Resources</div></div>
+	        	<div class="sidebar">
+	        	<ul>
+	        	<li>Volunteer Application</li>
+	        	<li>Volunteer Brochure</li>
+	        	<li>Diversity Dialogue Leader Application</li>
+	        	<li>Group Facilitator Application</li>
+	        	<li>IWIS Application</li>
+	        	</ul>
+	        	</div>
+    	        
+    	    <div style="clear:both;"></div>
+		
+			</div><!-- #page-content -->
 			
 			<?php thematic_belowcontent(); ?> 
 			
 		</div><!-- #container -->
-
+		
 <?php 
 
     // action hook for placing content below #container
     thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
     
     // calling footer.php
     get_footer();
