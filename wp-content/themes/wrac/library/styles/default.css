@@ -69,7 +69,7 @@ blockquote {
     font-style:italic;
 }
 table {
-    border:1px solid #ccc;
+    border:none;
     border-width:1px 1px 0 1px;
     font-size:13px;
     line-height:18px;
@@ -440,7 +440,7 @@ a:hover {
 }
 .page-title {
     font-size:13px;
-    line-height:18px;
+    line-height:normal;
     padding:0 0 44px 0;
 }
 .attachment .page-title {
@@ -1201,6 +1201,9 @@ span.descr {
     margin-left: 0;
 }
 
+#wp-calendar{
+	width: 100% !important;
+}
 /* =Footer
 -------------------------------------------------------------- */
 

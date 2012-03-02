@@ -13,6 +13,7 @@
 		    <?php thematic_abovecontent(); ?>
 			
 			<div id="page_content">
+			<div class="hentry">
 		
 		        <?php 
 		
@@ -33,7 +34,7 @@
 		        thematic_navigation_below();
 		
 		        ?>
-    			
+    		</div>
 	        
 				<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</a></div></div>
     			
