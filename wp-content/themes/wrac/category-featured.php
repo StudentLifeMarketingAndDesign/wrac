@@ -15,7 +15,7 @@
 			<div id="page_content">
 			<div class="hentry">
 	        
-	        <h1 class="entry-title">Events</h1>
+	        <h1 class="entry-title">Get the Facts</h1>
 	            <?php
 	
 	            // create the navigation above the content
@@ -24,7 +24,7 @@
 	            // action hook for placing content above the category loop
 	            thematic_above_categoryloop();
 	            
-	            echo '<p>WRAC sponsors a wide range of educational programming events throughout the year &#150; from large events such as the annual Iowa Women&#039;s Music Festival each September and conferences in April on race, privilege and cultural competency... to smaller, more intimate discussions as well as skill-building workshops and thought-provoking lectures/presentations.</p>';
+	            echo '<p>The Women&#039;s Resource and Action Center (WRAC) at The University of Iowa is a diverse community dedicated to fostering women&#039;s individual empowerment and systemic solutions to all forms of oppression. The Center leads and collaborates on projects that serve UI students, staff, faculty, and the greater community. Call 319-756-3456 for more information.</p>';
 	
 	            // action hook creating the category loop
 	            thematic_categoryloop();
@@ -38,22 +38,15 @@
 	            ?>
 	        </div>
     			
-    			<div class="sb_header"><div>Calendar</div></div>
-    			<div class="sidebar">
-    			<?php ec3_get_calendar(); ?>
-    			</div>
-	
-				<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</a></div></div>
-	        
-				<div class="sb_header"><div>Resources</div></div>
+    			<div class="sb_header"><div>Topics</div></div>
 	        	<div class="sidebar">
-	        	<ul>
-	        	<li>Volunteer Application</li>
-	        	<li>Volunteer Brochure</li>
-	        	<li>Diversity Dialogue Leader Application</li>
-	        	<li>Group Facilitator Application</li>
-	        	<li>IWIS Application</li>
-	        	</ul>
+            	<?php wp_nav_menu( array('menu' => 'Topics',  'walker' => new description_walker() )); ?>
+	        	</div>
+    			
+	        
+				<div class="sb_header"><div>Partners</div></div>
+	        	<div class="sidebar">
+            	<?php wp_nav_menu( array('menu' => 'Partners',  'walker' => new description_walker() )); ?>
 	        	</div>
     	        
     	    <div style="clear:both;"></div>

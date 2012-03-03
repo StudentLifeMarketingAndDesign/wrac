@@ -70,7 +70,6 @@ blockquote {
 }
 table {
     border:none;
-    border-width:1px 1px 0 1px;
     font-size:13px;
     line-height:18px;
     margin:0 0 22px 0;
@@ -79,12 +78,14 @@ table {
 caption {
     text-align:left;
 }
+/*
 tr {
     border-bottom:1px solid #ccc;
 }
 th, td {
     padding: .7em 1.25em;
 }
+*/
 hr {
     background-color:#ccc;
     border:0;
@@ -232,6 +233,7 @@ a:hover {
 	margin: auto;
     padding: 20px 40px;
     background-image: url('images/bg.png');
+    clear: both;
 }
 #page_content h1{
 	color:#f5714e;
@@ -385,6 +387,40 @@ a:hover {
 
 #gtf_featured{
 	float: left;
+}
+
+#backtoGTF{
+	padding:5px;
+	background-color: #8b6f96;
+	float: left;
+	margin-top: 8px;
+	font-family: 'arvo';
+	font-size: 16px;
+	vertical-align: middle;
+	color: #4c2f5b;
+}
+
+#backtoGTF span{
+	font-family: Helvetica, sans-serif;
+	margin-left: -12px;
+}
+
+#backarrow{
+	width: 0;
+	height: 0;
+	border-top: 24px solid transparent;
+	border-bottom: 24px solid transparent;
+	border-right: 24px solid #8b6f96;
+	float: left;
+}
+
+#backtoGTF:hover{
+	color: #fff;
+	text-shadow: 0px 3px 4px rgba(0,0,0,.8);
+}
+
+#page_content .more_butt{
+	border: 2px solid #6b4d77;
 }
 
 .more_butt{
@@ -1176,6 +1212,11 @@ span.descr {
 /*
 	Event Calendar
 */
+
+
+.ec3_popup table{
+margin-bottom: 0px;
+}
 .ec3_list{
 	list-style: none;
 	margin-bottom: 25px;
@@ -1203,6 +1244,17 @@ span.descr {
 
 #wp-calendar{
 	width: 100% !important;
+}
+
+#wp-calendar table td, #wp-calendar table td.pad:hover, #wp-calendar table.nav tr td{
+	padding: 0px !important;
+	border: 0px !important;
+	background-color: transparent;
+}
+#wp-calendar table td:hover{
+	padding: 0px !important;
+	border: 0 !important;
+	background-color: #6b4d77;
 }
 /* =Footer
 -------------------------------------------------------------- */
