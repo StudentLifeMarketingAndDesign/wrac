@@ -247,6 +247,9 @@ a:hover {
 	font-weight: lighter;
 	line-height: normal;
 }
+#cat-content p{
+	line-height: normal;
+}
 #content{
 	width:960px;
 	margin: auto;
@@ -264,7 +267,7 @@ a:hover {
 #slider{
 	width:960px;
 	height:440px;
-/*	background-color:#666;*/
+	background-color:#FFF;
 	margin: auto;
 	margin-bottom: 30px;
 	background-position-y: center;

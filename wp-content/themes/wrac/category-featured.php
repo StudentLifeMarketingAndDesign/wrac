@@ -16,6 +16,9 @@
 			<div class="hentry">
 	        
 	        <h1 class="entry-title">Get the Facts</h1>
+	           
+	            <div id="cat-content">
+	            
 	            <?php
 	
 	            // create the navigation above the content
@@ -36,6 +39,9 @@
 	            thematic_navigation_below();
 	            
 	            ?>
+	            
+	            </div>
+	            
 	        </div>
     			
     			<div class="sb_header"><div>Topics</div></div>
