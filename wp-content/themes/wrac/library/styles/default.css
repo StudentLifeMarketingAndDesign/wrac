@@ -577,6 +577,9 @@ a:hover {
     padding:22px 0 0 0;
     float: left;
 }
+.entry-content p{
+	line-height: 30px;
+}
 #featured .entry-content{
 	color:#503759;
 }
@@ -1225,6 +1228,7 @@ margin-bottom: 0px;
     font-family:'arvo';
     line-height:18px;
 	font-weight: lighter;
+	margin-left: 0 !important;
 }
 
 .ec3_events ul{
@@ -1232,7 +1236,8 @@ margin-bottom: 0px;
 	margin-left: 0;
 }
 
-.ec3_events li{
+.ec3_events{
+	margin: 0;
 }
 
 .ec3_events li a{
