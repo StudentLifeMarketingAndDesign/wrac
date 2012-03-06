@@ -526,8 +526,7 @@ if (function_exists('childtheme_override_featured_post'))  {
 } else {
 	function thematic_featured_post() {?>
 	<?php
-				wp_reset_query();
-				query_posts( array ( 'category_name' => 'featured', 'posts_per_page' => 1 ) );
+				query_posts( array ( 'cat' => 13, 'posts_per_page' => 1 ) );
 	?>		
 				<div id="post-<?php the_ID();
 					echo '" ';
@@ -710,7 +709,13 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 } else {
 	function thematic_postheader_posttitle() {
 
-	    if (is_single() || is_page()) {
+	    if (is_single()) {
+	        $posttitle = '<h1 class="entry-title" id="single">' . get_the_title() . "</h1>\n";
+	    	$posttitle .= '<div class="user">';
+			$posttitle .= '<div class="user_thumb">'.get_avatar(get_the_author_meta('ID'),80,'',get_the_author_meta('display_name')).'</div>';
+	    	$posttitle .= thematic_postmeta_authorlink();
+	  		$posttitle .= '</div>';
+	  	} elseif (is_page()) {
 	        $posttitle = '<h1 class="entry-title">' . get_the_title() . "</h1>\n";
 	    } elseif (is_404()) {    
 	        $posttitle = '<h1 class="entry-title">' . __('Not Found', 'thematic') . "</h1>\n";
@@ -744,10 +749,6 @@ if (function_exists('childtheme_override_postheader_postmeta'))  {
 	    $postmeta .= thematic_postmeta_editlink();
 	                   
 	    $postmeta .= "</div><!-- .entry-meta -->\n";
-	    $postmeta .= '<br /><div class="user">';
-		$postmeta .= '<div class="user_thumb"></div>';
-	    $postmeta .= thematic_postmeta_authorlink();
-	    $postmeta .= '</div>';
 	    
 	    return apply_filters('thematic_postheader_postmeta',$postmeta); 
 	
@@ -765,7 +766,7 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	    
 	    global $authordata;
 	
-	    $authorlink = '<span class="meta-prep meta-prep-author">' . __('By ', 'thematic') . '</span>';
+	    $authorlink = '<span class="meta-prep meta-prep-author">' . __('', 'thematic') . '</span>';
 	    $authorlink .= '<span class="author vcard">'. '<a class="url fn n" href="';
 	    $authorlink .= get_author_posts_url($authordata->ID, $authordata->user_nicename);
 	    $authorlink .= '" title="' . __('View all posts by ', 'thematic') . get_the_author_meta( 'display_name' ) . '">';

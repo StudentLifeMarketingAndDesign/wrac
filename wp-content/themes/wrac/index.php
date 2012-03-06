@@ -69,11 +69,19 @@
 					}
      				thematic_postheader(); ?>
 					<div class="entry-content">
-<?php the_excerpt(); ?>
+					<?php
+					
+	    			echo '<div class="user">';
+					echo '<div class="user_thumb">'.get_avatar(get_the_author_meta('ID'),80,'',get_the_author_meta('display_name')).'</div>';
+	    			echo thematic_postmeta_authorlink();
+	  		 		echo '</div>';
+					the_excerpt();
+					?>
 
 					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
 					</div><!-- .entry-content -->
 					<?php //thematic_postfooter(); ?>
+					<div style="clear:both;"></div>
 				</div><!-- #post -->
 
 			<?php 
@@ -100,14 +108,8 @@
             	<div id="featured">
             	<div id="featured-post">
 				<?php
-            	// action hook for placing content above the index loop
-            	thematic_above_indexloop();
-				
-            	// action hook creating the index loop
+				// action hook creating the index loop
             	thematic_featured_post();
-				
-            	// action hook for placing content below the index loop
-            	thematic_below_indexloop();
             	?>
 				</div>
             	<div id="featured-thumb">

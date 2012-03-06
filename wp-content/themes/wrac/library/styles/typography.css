@@ -17,6 +17,13 @@ input, textarea {
 	font-family: Verdana, sans-serif;
 }
 
+form p, input, textarea{
+	font-size: 14px;
+}
+form, form h1, form h2, form h3, form h4{
+	font-size: 16px;
+}
+
 /* Headings
 -------------------------------------------------------------- */
 

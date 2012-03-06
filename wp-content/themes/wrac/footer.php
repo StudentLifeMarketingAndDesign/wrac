@@ -21,7 +21,7 @@
 		<p>
 		P: (319) 335-1486<br />
 		F: (319) 353-1985<br />
-		E: wrac@uiowa.edu
+		E: <a href="mailto:wrac@uiowa.edu">wrac@uiowa.edu</a>
 		</p>
         </div>
         <div id="house"></div>
