@@ -13,7 +13,7 @@
 			<?php thematic_abovecontent(); ?>
 			
 			<div id="page_content">
-			<a class="backarrow" href="<?php echo get_bloginfo('wpurl') ?>/category/featured"><div id="backarrow"></div><div id="backtoGTF"><span>back to</span> Get the Facts</div></a>
+			<a class="backarrow" href="<?php echo get_bloginfo('wpurl') ?>/category/featured"><div id="backarrow"></div><div id="backtoGTF"><span>back to Get Informed</span></div></a>
 			<div style="clear:both;"></div>
 		
     	        <?php 

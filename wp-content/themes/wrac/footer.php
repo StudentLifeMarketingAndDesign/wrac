@@ -10,7 +10,7 @@
 	<div id="footwrap">
 	<div style="clear:both;"></div>
 	<div id="footer">
-    	<div id="showFancy" onclick="location.href='javascript:showFancy();';" style="cursor:pointer;">Request Information</div>
+    	<div id="showFancy" onclick="location.href='javascript:showFancy();';" style="cursor:pointer;">Volunteer with WRAC</div>
         <div id="find-us">
         <h3>Find Us</h3>
         <h4>
@@ -38,7 +38,7 @@
             	<?php wp_nav_menu( array('menu' => 'Get Involved',  'walker' => new description_walker() )); ?>
         </div>
         <div id="resources">
-        <h3><a href="resources/">Resources</a></h3>
+        <h3><a href="get-the-facts/">Get the Facts</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Resources',  'walker' => new description_walker() )); ?>
         </div>
         

@@ -2,7 +2,7 @@
 /* =Global Elements
 -------------------------------------------------------------- */
 body {
-	background-image:url('images/bg.jpg');
+	background:url('images/bg.jpg');
 	background-position: center;
 	min-width: 1030px;
 }
@@ -27,14 +27,14 @@ input{
 
 #navbar{
 	width: 100%;
-    background-image: url('images/bg.png');
+    background: url('images/bg.png');
 	height: 50px;
 	clear: both;
 	margin-bottom: 20px;
 }
 
 #exit{
-	background-image: url('images/exit.gif');
+	background: url('images/exit.gif') top;
 	position:fixed;
 	width:65px;
 	height:196px;
@@ -43,7 +43,7 @@ input{
 }
 
 #exit:hover{
-	background-position-y: 196px;
+	background-position: bottom;
 }
 
 #wrapper{
@@ -129,7 +129,7 @@ a:hover {
     text-shadow: 5px 5px 6px rgba(0,0,0,.5);
 }
 #logo{
-    background-image: url('images/logo.png');
+    background: url('images/logo.png');
     background-repeat: no-repeat;
     background-position: right;
     background-position-y: 30px;
@@ -151,7 +151,7 @@ a:hover {
     font-style:italic;
 }
 #dome{
-	background-image: url('images/dome.png');
+	background: url('images/dome.png');
 	width:230px;
 	height:61px;
 	float: right;
@@ -232,7 +232,7 @@ a:hover {
 	width:960px;
 	margin: auto;
     padding: 20px 40px;
-    background-image: url('images/bg.png');
+    background: url('images/bg.png');
     clear: both;
 }
 #page_content h1{
@@ -253,14 +253,14 @@ a:hover {
 #content{
 	width:960px;
 	margin: auto;
-    background-image: url('images/bg.png');
+    background: url('images/bg.png');
     padding-top: 8px;
     padding-bottom: 100px;
 }
 #content-butt{
 	width:960px;
 	margin: auto;
-    background-image: url('images/bg.png');
+    background: url('images/bg.png');
     height:100px;
     margin-top:-21px;
 }
@@ -368,7 +368,7 @@ a:hover {
 }
 #featured{
 	clear: both;
-	background-image: url('images/banner.png');
+	background: url('images/banner.png');
 	height:396px;
 	width: 1030px;
     margin-top:-21px;
@@ -392,34 +392,72 @@ a:hover {
 	float: left;
 }
 
+#immediate-assistance{
+	padding: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: -moz-linear-gradient(top,  rgba(109,0,25,0.7) 0%, rgba(109,0,25,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,0,25,0.7)), color-stop(100%,rgba(109,0,25,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(109,0,25,0.7) 0%,rgba(109,0,25,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(109,0,25,0.7) 0%,rgba(109,0,25,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(109,0,25,0.7) 0%,rgba(109,0,25,0) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(109,0,25,0.7) 0%,rgba(109,0,25,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b36d0019', endColorstr='#006d0019',GradientType=0 ); /* IE6-9 */
+}
+
+#immediate-assistance h1, #immediate-assistance h2{
+	text-shadow: 0px 3px 4px rgba(0,0,0,.8);
+}
+
+#sustained {
+	float: left;
+	width: 350px;
+}
+
+#sustained-numbers{
+	float: right;
+	width: 300px;
+}
+
 #backtoGTF{
 	padding:5px;
 	background-color: #8b6f96;
 	float: left;
 	margin-top: 8px;
-	font-family: 'arvo';
 	font-size: 16px;
 	vertical-align: middle;
-	color: #4c2f5b;
+	height: 22px;
+	color: #8b6f96;
 }
 
 #backtoGTF span{
 	font-family: Helvetica, sans-serif;
 	margin-left: -12px;
+	color: #4c2f5b;
+	font-family: 'arvo';
 }
 
-#backarrow{
+#backtoGTF::before{
+	content: '';
+	visibility: visible;
 	width: 0;
 	height: 0;
 	border-top: 24px solid transparent;
 	border-bottom: 24px solid transparent;
-	border-right: 24px solid #8b6f96;
-	float: left;
+	border-right: 24px solid;
+	margin-left: -20px;
+	display: block;
+	margin-top: -13px;
+	float:left;
 }
 
 #backtoGTF:hover{
-	color: #fff;
-	text-shadow: 0px 3px 4px rgba(0,0,0,.8);
+	color: #F5714E;
+	background-color: #F5714E;
+}
+
+#backtoGTF::before:hover{
+	border-color: pink;
 }
 
 #page_content .more_butt{
@@ -1006,7 +1044,7 @@ span.wpcf7-list-item-label{
 #staff_bio{
 	width: 320px;
 	float: left;
-	text-align: justify;
+	min-height: 400px;
 }
 
 #staff_inf{
@@ -1015,6 +1053,18 @@ span.wpcf7-list-item-label{
 	margin-top: 20px;
 	font-family: 'arvo', sans-serif;
 	font-size: 18px;
+}
+
+.user{
+	float: right
+	word-wrap: break-word;
+	display: none;
+}
+
+.user_thumb{
+	width: 80px;
+	height: 80px;
+	background-color: #666;
 }
 
 .item{
@@ -1289,7 +1339,7 @@ margin-bottom: 0px;
 #fancyexit{
 	width: 29px;
 	height: 29px;
-	background-image: url('images/x.png');
+	background: url('images/x.png');
 	position: absolute;
 	margin-left: 406px;
 	margin-top: -31px;
@@ -1297,7 +1347,7 @@ margin-bottom: 0px;
 
 #showFancy{
 	background-color: #F5714E;
-	width: 305px;
+	width: 333px;
 	font-size: 30px;
 	padding: 15px;
 	font-family: 'Arvo', sans-serif;
@@ -1311,7 +1361,7 @@ margin-bottom: 0px;
 }
 
 #showFancy:hover{	
-	width:318px;
+	width:343px;
 	height: 23px;
 	margin-bottom: 19px;
 	margin-left: 14px;
@@ -1332,7 +1382,7 @@ span.wpcf7-not-valid-tip{
 #footwrap{
 	width: 100%;
 	height: 240px;
-    background-image: url('images/bg.png');
+    background: url('images/bg.png');
     margin-top: 20px;
     padding-top: 20px;
 }
@@ -1368,7 +1418,7 @@ span.wpcf7-not-valid-tip{
 
 #resources
 {
-	width: 101px;
+	width: 120px;
 }
 
 #footer ul{
@@ -1390,7 +1440,7 @@ span.wpcf7-not-valid-tip{
 }
 
 #house {
-	background-image: url('images/house.png');
+	background: url('images/house.png');
 	width:201px;
 	height: 175px;
 	float: left;
@@ -1399,7 +1449,7 @@ span.wpcf7-not-valid-tip{
 #flickr{
 	width: 70px;
 	height: 70px;
-	background-image: url('images/flickr.png');
+	background: url('images/flickr.png') top;
 	float: left;
 	margin-left: 30px;
 }
@@ -1407,7 +1457,7 @@ span.wpcf7-not-valid-tip{
 #facebook{
 	width: 70px;
 	height: 70px;
-	background-image: url('images/facebook.png');
+	background: url('images/facebook.png') top;
 	float: left;
 	margin-left: 30px;
 }
@@ -1415,21 +1465,21 @@ span.wpcf7-not-valid-tip{
 #twitter{
 	width: 70px;
 	height: 70px;
-	background-image: url('images/twitter.png');
+	background: url('images/twitter.png') top;
 	float: left;
 	margin-left: 30px;
 }
 
 #flickr:hover{
-	background-position-y: 70px;
+	background-position: bottom;
 }
 
 #facebook:hover{
-	background-position-y: 70px;
+	background-position: bottom;
 }
 
 #twitter:hover{
-	background-position-y: 70px;
+	background-position: bottom;
 }
 
 #soc_med{

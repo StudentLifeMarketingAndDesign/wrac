@@ -51,6 +51,8 @@
 				<div id="col1">
 				<?php
 				
+				query_posts($query_string . '&cat=-13');
+				
 				while ( have_posts() ) : the_post();
 		
 				thematic_abovepost(); ?>

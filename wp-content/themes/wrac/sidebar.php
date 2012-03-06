@@ -1,15 +1,9 @@
-<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</a></div></div>
+<div class="sb_header_link" onclick="location.href='https://www.uifoundation.org/GiveToIowa/WebObjects/GiveToIowa.woa/wa/goTo?area=wrac';" style="cursor:pointer;"><div>Give to WRAC</a></div></div>
     			
 	        
 				<div class="sb_header"><div>Resources</div></div>
 	        	<div class="sidebar">
-	        	<ul>
-	        	<li>Volunteer Application</li>
-	        	<li>Volunteer Brochure</li>
-	        	<li>Diversity Dialogue Leader Application</li>
-	        	<li>Group Facilitator Application</li>
-	        	<li>IWIS Application</li>
-	        	</ul>
+            	<?php wp_nav_menu( array('menu' => 'Resources-Side',  'walker' => new description_walker() )); ?>
 	        	</div>
     	        
     	    <div style="clear:both;"></div>

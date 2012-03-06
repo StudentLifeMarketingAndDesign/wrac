@@ -739,13 +739,15 @@ if (function_exists('childtheme_override_postheader_postmeta'))  {
 	function thematic_postheader_postmeta() {
 
 	    $postmeta = '<div class="entry-meta">';
-//	    $postmeta .= thematic_postmeta_authorlink();
-//	    $postmeta .= '<span class="meta-sep meta-sep-entry-date"> | </span>';
 	    $postmeta .= thematic_postmeta_entrydate();
 	    
 	    $postmeta .= thematic_postmeta_editlink();
 	                   
 	    $postmeta .= "</div><!-- .entry-meta -->\n";
+	    $postmeta .= '<br /><div class="user">';
+		$postmeta .= '<div class="user_thumb"></div>';
+	    $postmeta .= thematic_postmeta_authorlink();
+	    $postmeta .= '</div>';
 	    
 	    return apply_filters('thematic_postheader_postmeta',$postmeta); 
 	
