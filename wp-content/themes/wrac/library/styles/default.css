@@ -172,18 +172,20 @@ a:hover {
     font-weight: lighter;
     padding-top: 20px;
     margin: 0px auto;
-    width:960px;
+    width:1015px;
     text-shadow: 2px 2px 3px rgba(0,0,0,.5);
 }
 
 #access ul{
 	list-style: none;
+	width: 1015px;
+	margin-left: 11px;
 }
 
 #access li{
 	float:left;
 	margin-left: 19px;
-	margin-right: 19px;
+	margin-right: 29px;
 	margin-top:-6px;
 }
 
