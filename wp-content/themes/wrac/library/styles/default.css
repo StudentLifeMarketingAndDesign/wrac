@@ -38,7 +38,7 @@ input{
 	position:fixed;
 	width:65px;
 	height:196px;
-	margin-top: 35%;
+	top: 35%;
 	z-index: 101;
 }
 
@@ -1081,7 +1081,7 @@ span.wpcf7-list-item-label{
 	float: right;
 	width: 80px;
 	word-wrap: break-word;
-	margin-top: -44px;
+	margin-top: -38px;
 }
 
 #page_content .user{
