@@ -93,6 +93,7 @@
 				}
 				$count = $count + 1;
 		endwhile;
+				wp_reset_query();
             	?>
 				</div>
 				<div id="col2">
@@ -108,6 +109,8 @@
             	<div id="featured">
             	<div id="featured-post">
 				<?php
+				query_posts( 'cat=13' );
+				while ( have_posts() ) : the_post();
 				// action hook creating the index loop
             	thematic_featured_post();
             	?>
@@ -115,6 +118,10 @@
             	<div id="featured-thumb">
             	<?php
             	the_post_thumbnail('medium');
+				endwhile;
+
+				// Reset Query
+				wp_reset_query();
             	?>
             	</div>
             	<div id="more-topics"><span>more topics</span>

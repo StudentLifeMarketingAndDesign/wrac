@@ -525,9 +525,6 @@ if (function_exists('childtheme_override_featured_post'))  {
 	}
 } else {
 	function thematic_featured_post() {?>
-	<?php
-				query_posts( array ( 'cat' => 13, 'posts_per_page' => 1 ) );
-	?>		
 				<div id="post-<?php the_ID();
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
