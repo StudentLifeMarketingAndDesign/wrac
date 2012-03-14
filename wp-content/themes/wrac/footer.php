@@ -29,7 +29,7 @@
             	<?php wp_nav_menu( array('menu' => 'Services',  'walker' => new description_walker() )); ?>
         </div>
         <div id="events">
-        <h3><a href="events/">Events</a></h3>
+        <h3><a href="category/events/">Events</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Events',  'walker' => new description_walker() )); ?>
         </div>
         <div id="get-involved">
