@@ -78,8 +78,7 @@
 </head>
 
 <div id="top"></div>
-
-	
+        
 	<div id="fancybox">
 	<div id="fancyexit" onclick="hideFancy();" style="cursor:pointer;"></div>
 	<?php echo do_shortcode( '[contact-form-7 id="179" title="Request Info"]' ); ?>

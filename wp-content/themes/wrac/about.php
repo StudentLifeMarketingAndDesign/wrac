@@ -63,27 +63,7 @@ Template Name: About WRAC Page
 	                    edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
 	
 					</div><!-- .entry-content -->
-				</div><!-- #post --> 	        
-    			
-	        
-				<div class="sb_header"><div>Contact Us</div></div>
-	        	<div class="sidebar"><h3>Women's Resources and Action Center</h3>
-	        	<p>
-	        	30 N. Madison St.<br />
-	        	Iowa City, IA 52245
-	        	</p>
-	        	<h3 style="float:left;">P: &nbsp;</h3>
-	        	<p style="float:left;margin:0;">(319) 335-1486</p>
-	        	<h3 style="float:left;">F: &nbsp;</h3>
-	        	<p style="float:left;margin:0;">(319) 353-1985</p>
-	        	<h3 style="float:left;">E: &nbsp;</h3>
-	        	<p style="float:left;">wrac@uiowa.edu</p>
-	        	<h3>Business Hours</h3>
-	        	<p>
-	        	Monday - Friday<br />
-	        	9:00 AM - 5:00 PM
-	        	</p>
-	        	</div>
+				</div><!-- #post -->
 	        	
 	        	<?php
 	        	include 'sidebar-about.php';
@@ -96,8 +76,6 @@ Template Name: About WRAC Page
 	        ?>
 	
 			</div><!-- #content -->
-			
-			<?php thematic_belowcontent(); ?> 
 			
 		</div><!-- #container -->
 

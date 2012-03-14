@@ -99,8 +99,6 @@ Template Name: Get The Facts Page
 	
 			</div><!-- #content -->
 			
-			<?php thematic_belowcontent(); ?> 
-			
 		</div><!-- #container -->
 
 <?php 

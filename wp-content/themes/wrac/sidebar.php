@@ -1,4 +1,4 @@
-<div class="sb_header_link" onclick="location.href='https://www.uifoundation.org/GiveToIowa/WebObjects/GiveToIowa.woa/wa/goTo?area=wrac';" style="cursor:pointer;"><div>Get Involved</a></div></div>
+
     			
 	        
 				<div class="sb_header"><div>Resources</div></div>
@@ -7,3 +7,7 @@
 	        	</div>
     	        
     	    <div style="clear:both;"></div>
+    	    
+    	    
+			
+			<?php thematic_belowcontent(); ?> 

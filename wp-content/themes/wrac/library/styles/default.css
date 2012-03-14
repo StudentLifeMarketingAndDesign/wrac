@@ -461,6 +461,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b36d0019', e
 	border-color: pink;
 }
 
+.butt{
+	padding: 5px 10px;
+	background-color: #4c2f5b;
+	float: right;
+	font-family: Helvetica;
+	font-size: 18px;
+	margin-left: 23px;
+	margin-right: -13px;
+	margin-top: 53px;
+	border: 2px solid;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-left-color: #6b4d77;
+	border-top-color: #6b4d77;
+	border-bottom-color: #42234f;
+	border-right-color: #42234f;
+	color: #d6bcea;
+}
+
+.butt:hover{
+	background-color: #6b4d77;
+	border-right-color: #6b4d77;
+	border-bottom-color: #6b4d77;
+	border-top-color: #42234f;
+	border-left-color: #42234f;
+	color: #fff;
+	padding-top: 6px;
+	padding-left: 11px;
+	padding-bottom: 4px;
+	padding-right: 9px;
+}
+
+#content-butt .butt{
+	margin-left: 0;
+	margin-right: 10px;
+}
+
 #page_content .more_butt{
 	border: 2px solid #6b4d77;
 }
@@ -1010,7 +1047,7 @@ span.wpcf7-list-item-label{
 /* =Asides, Sidebars & Widget-Ready Areas
 -------------------------------------------------------------- */
 
-.sb_header, .sb_header_link{
+.sb_header{
 	width:210px;
 	height:45px;
 	background-color: #f5714e;
@@ -1020,15 +1057,11 @@ span.wpcf7-list-item-label{
 	margin-top: 28px;
 }
 
-.sb_header div, .sb_header_link div{
+.sb_header div{
 	font-family: 'arvo';
 	font-size: 24px;
 	margin-top: 12px;
 	font-weight: lighter;
-}
-
-.sb_header_link div a{
-	text-decoration: none;
 }
 
 .sb_header_link:hover{
@@ -1074,6 +1107,14 @@ span.wpcf7-list-item-label{
 	font-size: 18px;
 }
 
+.email{
+	border-bottom: 1px dashed #fff;
+}
+
+.email:hover{
+	border-bottom: 1px dashed #FF8A33;
+}
+
 .post-top{
 	float: left;
 	word-wrap: break-word;
@@ -1110,6 +1151,19 @@ span.wpcf7-list-item-label{
 
 .item{
 	float: left;
+	margin-bottom: 5px;
+}
+
+.lock, .lockwide{
+	background: url('images/lock.png');
+	background-repeat: no-repeat;
+	background-position: 170px 0px;
+	min-height: 40px;
+	min-width: 35px;
+}
+
+.lock{
+	background-position: 10px 0px;
 }
 
 span.descr {
@@ -1421,7 +1475,7 @@ span.wpcf7-not-valid-tip{
 
 #footwrap{
 	width: 100%;
-	height: 240px;
+	height: 200px;
     background: url('images/bg.png');
     margin-top: 20px;
     padding-top: 20px;
@@ -1440,7 +1494,7 @@ span.wpcf7-not-valid-tip{
 
 #services, #events, #get-involved, #resources{
 	float: left;
-	margin-left: 30px;
+	margin-left: 28px;
 	font-size: 16px;
 }
 
@@ -1458,7 +1512,7 @@ span.wpcf7-not-valid-tip{
 
 #resources
 {
-	width: 120px;
+	width: 125px;
 }
 
 #footer ul{

@@ -75,8 +75,6 @@
 	
 			</div><!-- #content -->
 			
-			<?php thematic_belowcontent(); ?> 
-			
 		</div><!-- #container -->
 
 <?php 

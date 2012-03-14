@@ -69,7 +69,7 @@
 						$email = get_post_meta($post->ID, 'email', true);
 						$phone = get_post_meta($post->ID,
 						 'phone', true);
-						echo '<div class="item"><span class="descr">email</span><a href="mailto:' . $email . '">' . $email . '</a></div>';
+						echo '<div class="item"><span class="descr">email</span><a class="email" href="mailto:' . $email . '">' . $email . '</a></div>';
 						echo '<div class="item"><span class="descr">phone</span>' . $phone . '</div>';
 						?>
 					</div>
@@ -77,27 +77,9 @@
 				</div><!-- #post -->
     			
 	        
-				<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</div></div>
-    			
-	        
-				<!--<div class="sb_header"><div>Request Info</div></div>
-	        	<div class="sidebar">
-	        	<?php echo do_shortcode( '[contact-form-7 id="179" title="Request Info"]' ); ?>
-	        	</div>-->
-    			
-	        
-				<div class="sb_header"><div>Resources</div></div>
-	        	<div class="sidebar">
-	        	<ul>
-	        	<li>Volunteer Application</li>
-	        	<li>Volunteer Brochure</li>
-	        	<li>Diversity Dialogue Leader Application</li>
-	        	<li>Group Facilitator Application</li>
-	        	<li>IWIS Application</li>
-	        	</ul>
-	        	</div>
-    	        
-    	    <div style="clear:both;"></div>
+				<?php
+				include 'sidebar-about.php'
+				?>
 	
 	        <?php
 	        
@@ -106,8 +88,6 @@
 	        ?>
 	
 			</div><!-- #content -->
-			
-			<?php thematic_belowcontent(); ?> 
 			
 		</div><!-- #container -->
 

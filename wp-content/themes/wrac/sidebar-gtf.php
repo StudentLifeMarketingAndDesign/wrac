@@ -11,5 +11,5 @@
 	        	<div class="sidebar">
             	<?php wp_nav_menu( array('menu' => 'Links',  'walker' => new description_walker() )); ?>
 	        	</div>
-    	        
-    	    <div style="clear:both;"></div>
+			
+			<?php thematic_belowcontent(); ?>

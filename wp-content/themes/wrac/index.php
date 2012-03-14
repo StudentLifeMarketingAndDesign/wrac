@@ -128,9 +128,11 @@
             	<?php wp_nav_menu( array('menu' => 'more topics' )); ?>
             	</div>
             	</div>
-            <div id="content-butt"></div>
+            <div id="content-butt">
 		
 			<?php thematic_belowcontent(); ?> 
+    		
+    		</div>
 		
 		</div><!-- #container -->
 

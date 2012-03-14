@@ -10,7 +10,6 @@
 	<div id="footwrap">
 	<div style="clear:both;"></div>
 	<div id="footer">
-    	<div id="showFancy" onclick="location.href='javascript:showFancy();';" style="cursor:pointer;">Volunteer with WRAC</div>
         <div id="find-us">
         <h3>Find Us</h3>
         <h4>
@@ -21,7 +20,7 @@
 		<p>
 		P: (319) 335-1486<br />
 		F: (319) 353-1985<br />
-		E: <a href="mailto:wrac@uiowa.edu">wrac@uiowa.edu</a>
+		E: <a class="email" href="mailto:wrac@uiowa.edu">wrac@uiowa.edu</a>
 		</p>
         </div>
         <div id="house"></div>

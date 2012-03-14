@@ -163,6 +163,8 @@ function thematic_belowpost() {
 // Just below #content
 function thematic_belowcontent() {
     do_action('thematic_belowcontent');
+    echo '<div style="clear:both;"></div><div class="butt" onclick="location.href=\'javascript:showFancy();\';" style="cursor:pointer;">Volunteer with WRAC</div><div class="butt" onclick="location.href=\'https://www.uifoundation.org/GiveToIowa/WebObjects/GiveToIowa.woa/wa/goTo?area=wrac\';" style="cursor:pointer;">Give to WRAC</div><div style="clear:both;"></div>';
+            
 } // end thematic_belowcontent
 
 

@@ -14,7 +14,7 @@
 		
 			<?php thematic_abovecontent(); ?>
 		
-			<div id="content">
+			<div id="page-content">
 			
 				<?php thematic_abovepost(); ?>
 		
@@ -29,11 +29,11 @@
 				
 				</div><!-- .post -->
 				
-				<?php thematic_belowpost(); ?>
+				<?php
+				include 'sidebar.php'
+				?>
 		
-			</div><!-- #content -->
-			
-			<?php thematic_belowcontent(); ?> 
+			</div><!-- #page-content -->
 			
 		</div><!-- #container -->
     
@@ -41,9 +41,6 @@
 
     // action hook for placing content below #container
     thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
 
     // calling footer.php
     get_footer();
