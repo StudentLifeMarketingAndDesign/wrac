@@ -26,7 +26,7 @@
         <div id="house"></div>
         <div id="services">
         <h3><a href="services/">Services</a></h3>
-            	<?php wp_nav_menu( array('menu' => 'Services',  'walker' => new description_walker() )); ?>
+            	<?php wp_nav_menu( array('menu' => 'Services')); ?>
         </div>
         <div id="events">
         <h3><a href="category/events/">Events</a></h3>
