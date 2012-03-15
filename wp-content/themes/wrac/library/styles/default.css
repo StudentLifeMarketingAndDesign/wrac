@@ -568,9 +568,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b36d0019', e
 	float: left;
 	margin-left: 40px;
 }
-.page-title {
+.page-title, .page-title author {
     font-size:13px;
-    line-height:normal;
+    line-height:normal !important;
     padding:0 0 44px 0;
 }
 .attachment .page-title {
@@ -661,6 +661,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b36d0019', e
 .author a{
 	font-size: 12px;
 	color:#8b6f96;
+	border: 0 !important;
 }
 .entry-meta .n {
     font-size:11px;

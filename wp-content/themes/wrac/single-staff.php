@@ -67,10 +67,11 @@
 					<div id="staff_inf">
 						<?php
 						$email = get_post_meta($post->ID, 'email', true);
-						$phone = get_post_meta($post->ID,
-						 'phone', true);
+						$phone = get_post_meta($post->ID, 'phone', true);
 						echo '<div class="item"><span class="descr">email</span><a class="email" href="mailto:' . $email . '">' . $email . '</a></div>';
+						if ($phone != null) {
 						echo '<div class="item"><span class="descr">phone</span>' . $phone . '</div>';
+						}
 						?>
 					</div>
 					

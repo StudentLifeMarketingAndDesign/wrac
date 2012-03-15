@@ -766,8 +766,8 @@ if (function_exists('childtheme_override_postmeta_authorlink'))  {
 	    global $authordata;
 	
 	    $authorlink = '<span class="meta-prep meta-prep-author">' . __('', 'thematic') . '</span>';
-	    $authorlink .= '<span class="author vcard">'. '<a class="url fn n" href="';
-	    $authorlink .= get_author_posts_url($authordata->ID, $authordata->user_nicename);
+	    $authorlink .= '<span class="author vcard">'. '<a class="url fn n" href="staff/';
+	    $authorlink .= strtolower(get_the_author_meta('user_firstname')).'-'.strtolower(get_the_author_meta('user_lastname'));
 	    $authorlink .= '" title="' . __('View all posts by ', 'thematic') . get_the_author_meta( 'display_name' ) . '">';
 	    $authorlink .= get_the_author_meta( 'display_name' );
 	    $authorlink .= '</a></span>';
