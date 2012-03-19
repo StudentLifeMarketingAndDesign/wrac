@@ -550,7 +550,56 @@ the_excerpt(); ?>
 
 			thematic_belowpost();
 	}
-} // end single_post
+} // end featured_post
+
+// The Event Post
+if (function_exists('childtheme_override_event_post'))  {
+	function thematic_event_post() {
+		childtheme_override_event_post();
+	}
+} else {
+	function thematic_event_post() { 
+		
+				thematic_abovepost(); ?>
+			
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+						echo '>';
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_postheader();
+					?>
+					
+					<div class="event-content">
+					<?php
+					
+	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+					  the_post_thumbnail();
+					}
+					
+					?>
+<?php thematic_content(); ?>
+
+						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
+					</div><!-- .entry-content -->
+					
+    	        
+    	        <div id="event_info">
+    	        <?php the_excerpt(); ?>
+    	        </div>
+    	        
+					<?php //thematic_postfooter(); ?>
+				</div><!-- #post -->
+		<?php
+
+			thematic_belowpost();
+	}
+} // end event_post
 
 add_action('thematic_singlepost', 'thematic_single_post');
 

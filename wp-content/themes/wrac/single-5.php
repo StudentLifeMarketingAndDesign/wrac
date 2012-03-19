@@ -12,7 +12,7 @@
 			
 			<?php thematic_abovecontent(); ?>
 			
-			<div id="page_content">
+			<div id="page_content" class="event">
 		
     	        <?php 
     	        
@@ -25,7 +25,7 @@
     	        get_sidebar('single-top');
 		
     	        // action hook creating the single post
-    	        thematic_singlepost();
+    	        thematic_event_post();
 				
     	        // calling the widget area 'single-insert'
     	        //get_sidebar('single-insert');
