@@ -231,7 +231,7 @@ if (function_exists('childtheme_override_page_title'))  {
 				$content .= ' <span>';
 				$content .= thematic_get_term_name();
 				$content .= '</span></h1>';
-		}	elseif (is_day()) {
+		} elseif (is_day()) {
 				$content .= '<h1 class="page-title">';
 				$content .= sprintf(__('Daily Archives: <span>%s</span>', 'thematic'), get_the_time(get_option('date_format')));
 				$content .= '</h1>';
@@ -503,7 +503,7 @@ if (function_exists('childtheme_override_single_post'))  {
 					<?php
 					
 	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-					  the_post_thumbnail();
+					  the_post_thumbnail('medium');
 					}
 					
 					?>
@@ -579,7 +579,7 @@ if (function_exists('childtheme_override_event_post'))  {
 					<?php
 					
 	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-					  the_post_thumbnail();
+					  the_post_thumbnail('medium');
 					}
 					
 					?>
@@ -590,7 +590,7 @@ if (function_exists('childtheme_override_event_post'))  {
 					
     	        
     	        <div id="event_info">
-    	        <?php the_excerpt(); ?>
+    	        <?php ec3_the_schedule(' %s <br /> ','%1$s %3$s %2$s ','<p> %s </p>'); ?>
     	        </div>
     	        
 					<?php //thematic_postfooter(); ?>
@@ -835,11 +835,16 @@ if (function_exists('childtheme_override_postmeta_entrydate'))  {
 } else {
 	function thematic_postmeta_entrydate() {
 	
+		if (in_category('events')){
+	    $entrydate = ec3_get_schedule('%s ',' %1$s %3$s %2$s ',' %s ');
+	    }
+	    else {
 	    $entrydate = '<span class="meta-prep meta-prep-entry-date">' . __('posted on ', 'thematic') . '</span>';
 	    $entrydate .= '<span class="entry-date"><abbr class="published" title="';
 	    $entrydate .= get_the_time(thematic_time_title()) . '">';
 	    $entrydate .= get_the_time(thematic_time_display());
 	    $entrydate .= '</abbr></span>';
+	    }
 	    
 	    return apply_filters('thematic_post_meta_entrydate', $entrydate);
 	   
@@ -917,7 +922,7 @@ if (function_exists('childtheme_override_content'))  {
 			$post = apply_filters('the_excerpt',$post);
 			if ( apply_filters( 'thematic_post_thumbs', TRUE) ) {
 				$post_title = get_the_title();
-				$size = apply_filters( 'thematic_post_thumb_size' , array(100,100) );
+				$size = apply_filters( 'thematic_post_thumb_size' , array(150,150) );
 				$attr = apply_filters( 'thematic_post_thumb_attr', array('title'	=> 'Permalink to ' . $post_title) );
 				if ( has_post_thumbnail() ) {
 					$post = '<a class="entry-thumb" href="' . get_permalink() . '" title="Permalink to ' . get_the_title() . '" >' . get_the_post_thumbnail(get_the_ID(), $size, $attr) . '</a>' . $post;
