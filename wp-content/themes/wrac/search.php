@@ -12,7 +12,8 @@
 		
 			<?php thematic_abovecontent(); ?>
 		
-			<div id="content">
+			<div id="page_content">
+			<div class="hentry">
 	
 	            <?php 
 	            
@@ -35,7 +36,9 @@
 	
 	                // create the navigation below the content
 	                thematic_navigation_below();
-	
+				?>
+				</div>
+				<?php
 	            } else {
 	            	
 	           		thematic_abovepost();
@@ -54,18 +57,19 @@
 						</div>
 					</form>
 				</div><!-- #post -->
-	
+				</div>
 	            <?php
-	            
+	            	
 	            	thematic_belowpost();
 	            
 	            }
 	            
+	            
+	            	include('sidebar.php');
+	            
 	            ?>
 	
 			</div><!-- #content -->
-			
-			<?php thematic_belowcontent(); ?> 
 			
 		</div><!-- #container -->
 
@@ -73,9 +77,6 @@
 
     // action hook for placing content below #container
     thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
     
     // calling footer.php
     get_footer();

@@ -1,4 +1,10 @@
 <?php
+/*
+Template Name: Category Page
+*/
+?>
+
+<?php
 
     // calling the header.php
     get_header();
@@ -15,11 +21,21 @@
 			<div id="page_content">
 			<div class="hentry">
 	        
-	        <h1 class="entry-title">Get Informed</h1>
+	        <h1 class="entry-title"><?php echo get_the_title(); ?></h1>
 	           
 	            <div id="cat-content">
-	            
 	            <?php
+	              	
+	              	
+	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+	                	echo "<div id='page_thumb'>";
+						the_post_thumbnail('large');
+						echo "</div>";
+					}
+					
+	            echo '<div class="entry-content">';
+	            the_content();
+	            echo '</div>';
 	
 	            // create the navigation above the content
 	            thematic_navigation_above();
@@ -27,9 +43,7 @@
 	            // action hook for placing content above the category loop
 	            thematic_above_categoryloop();
 	            
-	            //echo '<div id="page-descr">';
-	            //echo '<p>The Women&#039;s Resource and Action Center (WRAC) at The University of Iowa is a diverse community dedicated to fostering women&#039;s individual empowerment and systemic solutions to all forms of oppression. The Center leads and collaborates on projects that serve UI students, staff, faculty, and the greater community. Call 319-756-3456 for more information.</p>';
-	            //echo '</div>';
+				query_posts( array ( 'category_name' => get_the_title() ) );
 	
 	            // action hook creating the category loop
 	            thematic_categoryloop();
@@ -41,12 +55,21 @@
 	            thematic_navigation_below();
 	            
 	            ?>
-	            
 	            </div>
-	            
 	        </div>
     			
-    			<?php include 'sidebar-gtf.php'; ?>
+    			
+    		<?php
+    		if ( in_category(5) ){
+    			include 'sidebar-events.php';
+    		}
+    		if ( in_category(13) ){
+    			include 'sidebar-gtf.php';
+    		} else {
+    			include 'sidebar.php';
+    		}
+    		?>
+    			
     			
 		</div><!-- #page-content -->
 		</div><!-- #container -->

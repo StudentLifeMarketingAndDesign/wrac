@@ -463,12 +463,12 @@ if (function_exists('childtheme_override_index_loop'))  {
 				
 				thematic_belowpost();
 				
-				comments_template();
+				//comments_template();
 
-				if ($count==$thm_insert_position) {
-						get_sidebar('index-insert');
-				}
-				$count = $count + 1;
+				//if ($count==$thm_insert_position) {
+				//		get_sidebar('index-insert');
+				//}
+				//$count = $count + 1;
 		endwhile;
 	}
 } // end index_loop

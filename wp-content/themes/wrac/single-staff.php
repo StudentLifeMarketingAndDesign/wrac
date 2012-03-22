@@ -13,19 +13,8 @@
 			<?php thematic_abovecontent(); ?>
 		
 			<div id="page_content">
-	
-	            <?php
-	        
-	            // calling the widget area 'page-top'
-	            get_sidebar('page-top');
-	
-	            the_post();
-	            
-	            thematic_abovepost();
-	        
-	            ?>
-	            
-				<div id="post-<?php the_ID();
+			
+			<div id="post-<?php the_ID();
 					echo '" ';
 					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
 						post_class();

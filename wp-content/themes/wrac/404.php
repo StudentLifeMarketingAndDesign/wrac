@@ -14,7 +14,8 @@
 		
 			<?php thematic_abovecontent(); ?>
 		
-			<div id="page-content">
+			<div id="page_content">
+			<div class="hentry">
 			
 				<?php thematic_abovepost(); ?>
 		
@@ -28,11 +29,11 @@
     	        ?>
 				
 				</div><!-- .post -->
-				
+				</div>
 				<?php
 				include 'sidebar.php'
 				?>
-		
+					
 			</div><!-- #page-content -->
 			
 		</div><!-- #container -->

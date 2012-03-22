@@ -212,9 +212,10 @@ a:hover {
 	width:1030px;
 }
 #page_thumb{
-	width:614px;
-	margin: 0 auto;
 	text-align: center;
+}
+#page_thumb img{
+	max-width: 614px;
     border: 5px solid #F5714E;
 	-moz-box-shadow: 0px 7px 12px rgba(0,0,0,.5);
 	-webkit-box-shadow: 0px 7px 12px rgba(0,0,0,.5);
@@ -523,6 +524,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b36d0019', e
 	margin-top: 1px;
 	display: inline;
 	word-wrap: break-word;
+	margin-bottom: 45px;
 }
 
 .more_butt{
@@ -697,7 +699,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b36d0019', e
 .entry-content {
 	color: #FFF;
     padding: 0;
-    margin: 22px 0 0 0;
+    margin: 12px 0 0 0;
     float: left;
     word-wrap: break-word;
     width: 100%;
@@ -1529,7 +1531,7 @@ span.wpcf7-not-valid-tip{
 	text-decoration: none;
 }
 
-#services, #events, #get-involved, #resources{
+#services, #events, #get-involved, #get-informed{
 	float: left;
 	margin-left: 28px;
 	font-size: 16px;
@@ -1537,7 +1539,7 @@ span.wpcf7-not-valid-tip{
 }
 
 #services{
-	width: 154px;
+	width: 145px;
 }
 
 #events {
@@ -1548,9 +1550,8 @@ span.wpcf7-not-valid-tip{
 	width:142px;
 }
 
-#resources
-{
-	width: 125px;
+#get-informed {
+	width: 130px;
 }
 
 #footer ul{

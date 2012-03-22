@@ -36,8 +36,8 @@
         <h3><a href="get-involved/">Get Involved</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Get Involved',  'walker' => new description_walker() )); ?>
         </div>
-        <div id="resources">
-        <h3><a href="get-the-facts/">Get the Facts</a></h3>
+        <div id="get-informed">
+        <h3><a href="get-informed/">Get Informed</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Resources',  'walker' => new description_walker() )); ?>
         </div>
         

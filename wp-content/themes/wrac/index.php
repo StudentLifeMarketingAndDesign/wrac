@@ -9,8 +9,6 @@
 ?>
 
 		<div id="container">
-	
-			<?php thematic_abovecontent(); ?>
             
             <div id="slider">
 				
@@ -36,15 +34,8 @@
             </div>
 	
 			<div id="content">
-
-				<?php 
-            	
-            	// create the navigation above the content
-            	thematic_navigation_above();
-				
-            	// calling the widget area 'index-top'
-            	get_sidebar('index-top');
-            	?>
+			
+			
             	<div id="col_head1"><h1>Latest Blog Posts</h1></div>
             	<div id="col_head2"><h1>Initiatives</h1></div>
             	<div id="col_head3"><h1>Upcoming Events</h1></div>
@@ -53,9 +44,7 @@
 				
 				query_posts($query_string . '&cat=-13');
 				
-				while ( have_posts() ) : the_post();
-		
-				thematic_abovepost(); ?>
+				while ( have_posts() ) : the_post();?>
 
 				<div id="post-<?php the_ID();
 					echo '" ';
@@ -77,10 +66,7 @@
 	  		 		echo '</div>';
 					the_excerpt();
 					?>
-
-					<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
 					</div><!-- .entry-content -->
-					<?php //thematic_postfooter(); ?>
 					<div style="clear:both;"></div>
 				</div><!-- #post -->
 

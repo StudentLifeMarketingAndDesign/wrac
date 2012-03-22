@@ -10,18 +10,11 @@
 
 		<div id="container">
 			
-			<?php thematic_abovecontent(); ?>
-			
 			<div id="page_content">
 			<a class="backarrow" href="<?php echo get_bloginfo('wpurl') ?>/category/featured"><div id="backarrow"></div><div id="backtoGTF"><span>back to Get Informed</span></div></a>
 			<div style="clear:both;"></div>
 		
-    	        <?php 
-    	        
-    	        the_post();
-    	        
-    	        // create the navigation above the content
-				thematic_navigation_above();
+    	        <?php
 		
     	        // calling the widget area 'single-top'
     	        get_sidebar('single-top');

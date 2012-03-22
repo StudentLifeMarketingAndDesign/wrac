@@ -179,11 +179,11 @@ function create_post_type() {
 			),
 		'public' => true,
 		'has_archive' => true,
+		'exclude_from_search' => true,
 		'supports' => array( 'title', 'editor', 'thumbnail' )
 		)
 	);
 }
-
 
 // Post Thumbnails
 
