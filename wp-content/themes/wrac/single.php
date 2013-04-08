@@ -9,10 +9,17 @@
 ?>
 
 		<div id="container">
-			
+
 			<?php thematic_abovecontent(); ?>
-			
 			<div id="page_content">
+			<?php
+			if (in_category('get-informed') || post_is_in_descendant_category( 13 )){
+			?>
+			<a class="backarrow" href="<?php echo get_bloginfo('wpurl') ?>/topics"><div id="backarrow"></div><div id="backtoGTF"><span>back to Topics</span></div></a>
+			<div style="clear:both;"></div>
+			<?php
+			}
+			?>
 		
     	        <?php 
     	        
@@ -43,7 +50,7 @@
     			
 	        
 				<?php
-				include 'sidebar.php'
+				include 'sidebar.php';
 				?>
 		
 			</div><!-- #page-content -->

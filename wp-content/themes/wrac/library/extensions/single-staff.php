@@ -1,9 +1,4 @@
 <?php
-/*
-Template Name: About WRAC Page
-*/
-?>
-<?php
 
     // calling the header.php
     get_header();
@@ -18,6 +13,17 @@ Template Name: About WRAC Page
 			<?php thematic_abovecontent(); ?>
 		
 			<div id="page_content">
+	
+	            <?php
+	        
+	            // calling the widget area 'page-top'
+	            get_sidebar('page-top');
+	
+	            the_post();
+	            
+	            thematic_abovepost();
+	        
+	            ?>
 	            
 				<div id="post-<?php the_ID();
 					echo '" ';
@@ -33,12 +39,12 @@ Template Name: About WRAC Page
 	                // creating the post header
 	                thematic_postheader();
 	              	
-	              	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-	                	echo "<div id='page_thumb'>";
-						the_post_thumbnail('large');
-						echo "</div>";
+	              	echo "<div id='staff_pic'>";
+	                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+					  the_post_thumbnail();
 					}
-	                
+					echo "</div>";
+?>
 	                ?>
 	                
 					<div class="entry-content">
@@ -53,11 +59,29 @@ Template Name: About WRAC Page
 	
 					</div><!-- .entry-content -->
 				</div><!-- #post -->
-	        	
-	        	<?php
-	        	include 'sidebar-about.php';
-	        	include 'sidebar.php';
-	        	?>
+    			
+	        
+				<div class="sb_header_link" onclick="location.href='#';" style="cursor:pointer;"><div>Give to WRAC</div></div>
+    			
+	        
+				<!--<div class="sb_header"><div>Request Info</div></div>
+	        	<div class="sidebar">
+	        	<?php echo do_shortcode( '[contact-form-7 id="179" title="Request Info"]' ); ?>
+	        	</div>-->
+    			
+	        
+				<div class="sb_header"><div>Resources</div></div>
+	        	<div class="sidebar">
+	        	<ul>
+	        	<li>Volunteer Application</li>
+	        	<li>Volunteer Brochure</li>
+	        	<li>Diversity Dialogue Leader Application</li>
+	        	<li>Group Facilitator Application</li>
+	        	<li>IWIS Application</li>
+	        	</ul>
+	        	</div>
+    	        
+    	    <div style="clear:both;"></div>
 	
 	        <?php
 	        
@@ -66,6 +90,8 @@ Template Name: About WRAC Page
 	        ?>
 	
 			</div><!-- #content -->
+			
+			<?php thematic_belowcontent(); ?> 
 			
 		</div><!-- #container -->
 

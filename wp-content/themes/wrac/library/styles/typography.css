@@ -13,8 +13,28 @@ body{
 }
 
 input, textarea {
-	color: #000;
+	color: #fff;
 	font-family: Verdana, sans-serif;
+    border: 1px solid rgba(245,113,78,.5);
+    background: url(images/bg.png);
+}
+
+.fancybox input, .fancybox textarea {
+	border: 1px solid #666;
+	margin-top: 5px;
+}
+
+form .email{
+	border: none;
+}
+
+.fancybox .wpcf7-captchac{
+	margin-left: 3px;
+	margin-bottom: 5px;
+}
+
+.wpcf7-captchac{
+	margin-bottom: 5px;
 }
 
 form p, input, textarea{
@@ -35,6 +55,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin-bottom: 8px;
 	font-weight: lighter;
 	padding: 5px 0 5px 0;
+	line-height: normal;
 }
 
 h2 {
@@ -50,9 +71,13 @@ h3 {
 /* Text elements
 -------------------------------------------------------------- */
 
+address{
+	margin-bottom: 16px;
+}
+
 p {
-    padding: 8px 0 8px 0;
-    font: 18px helvetica, sans-serif;
+    padding: 0 0 14px 0;
+    font: 16px helvetica, sans-serif;
     font-weight: lighter;
 }
 #col1 p, #col2 p, #col3 p{
@@ -70,7 +95,14 @@ ol {
     font: 12px helvetica, sans-serif;
 }
 ul {
-	list-style:disc;
+	list-style:square;
+}
+.entry-content ul, .entry-content ol{
+	float: left;
+	clear: both;
+	width: 100%;
+	font-size: 16px;
+	font-weight: lighter;
 }
 ol {
 	list-style-type: decimal;
@@ -86,6 +118,15 @@ ol ol ol ol {
 }
 ul ul, ol ol, ul ol, ol ul {
 	margin-bottom:0;
+}
+.entry-content li{
+	float: left;
+	clear: right;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.entry-content li ul{
+	margin-top: 10px;
 }
 dl	{
     margin:0 1.5em;

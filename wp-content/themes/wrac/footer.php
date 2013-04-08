@@ -29,7 +29,7 @@
             	<?php wp_nav_menu( array('menu' => 'Services')); ?>
         </div>
         <div id="events">
-        <h3><a href="category/events/">Events</a></h3>
+        <h3><a href="events/">Events</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Events',  'walker' => new description_walker() )); ?>
         </div>
         <div id="get-involved">
@@ -37,14 +37,14 @@
             	<?php wp_nav_menu( array('menu' => 'Get Involved',  'walker' => new description_walker() )); ?>
         </div>
         <div id="get-informed">
-        <h3><a href="get-informed/">Get Informed</a></h3>
+        <h3><a href="topics/">Topics</a></h3>
             	<?php wp_nav_menu( array('menu' => 'Resources',  'walker' => new description_walker() )); ?>
         </div>
         
         <div id="soc_med">
-        <a href="http://www.flickr.com/photos/uiowawrac/"><div id="flickr"></div></a>
-        <a href="https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625"><div id="facebook"></div></a> 
-        <a href="http://twitter.com/#!/wracatuiowa"><div id="twitter"></div></a>
+        <a href="http://www.flickr.com/photos/uiowawrac/" target="_blank"><div id="flickr"></div></a>
+        <a href="https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625" target="_blank"><div id="facebook"></div></a> 
+        <a href="http://twitter.com/#!/wracatuiowa" target="_blank"><div id="twitter"></div></a>
         </div>
         <div id="dosl"></div>
         
@@ -74,5 +74,10 @@ thematic_after();
 
 ?>
 
+
+<!-- Camera calls -->    
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.easing.1.3.js'></script> 
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/camera.js'></script> 
 </body>
 </html>

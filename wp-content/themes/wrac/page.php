@@ -49,10 +49,31 @@
 					</div><!-- .entry-content -->
 				</div><!-- #post -->
     			
+            <?php
+        	    $children = get_pages('child_of='.$post->ID);
+				if( count( $children ) != 0 ) {
+					$children = wp_list_pages("title_li=&child_of=".$post->ID."&exclude=609,".$post->ID."&echo=0");
+					$title = get_the_title();
+				}
+				if($post->post_parent) {
+					$children2 = wp_list_pages("title_li=&child_of=".$post->post_parent."&exclude=".$post->ID."&echo=0");
+					$parent_link = get_permalink($post->post_parent);
+					$title2 = "<a href='".$parent_link."'>".get_the_title($post->post_parent)."</a>";
+				}
+			?>
+            <?php if ($children) {?>
+            	<div class="sb_header"><div><?php echo $title ?></div></div>
+	        	<div class="sidebar">
+					<?php echo $children; ?>
+	        	</div>
+	        <?php } if ($children2) {?>
+            	<div class="sb_header"><div><?php echo $title2 ?></div></div>
+	        	<div class="sidebar">
+					<?php echo $children2; ?>
+	        	</div>
+            <?php } ?>
 	        
-				<?php
-				include 'sidebar.php'
-				?>
+			<?php include 'sidebar.php';?>
     	        
     	    <div style="clear:both;"></div>
 	

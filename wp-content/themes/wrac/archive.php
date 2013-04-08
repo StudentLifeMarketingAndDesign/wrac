@@ -38,9 +38,8 @@
     		<?php
     		if ( in_category(5) ){
     			include 'sidebar-events.php';
-    		} else {
-    			include 'sidebar.php';
     		}
+    		include 'sidebar.php';
     		?>
 	        
 				

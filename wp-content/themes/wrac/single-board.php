@@ -71,7 +71,7 @@
     			
 	        
 				<?php
-				include 'sidebar-staff.php';
+				include 'sidebar-board.php';
 	        	include 'sidebar.php';
 				?>
 	

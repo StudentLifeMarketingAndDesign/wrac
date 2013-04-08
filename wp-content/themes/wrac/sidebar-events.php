@@ -11,8 +11,3 @@
 <div class="sidebar">
 	<?php ec3_get_events(); ?>
 </div>
-    			
-	        
-				<?php
-				include 'sidebar.php'
-				?>

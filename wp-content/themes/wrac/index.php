@@ -36,15 +36,16 @@
 			<div id="content">
 			
 			
-            	<div id="col_head1"><h1>Latest Blog Posts</h1></div>
-            	<div id="col_head2"><h1>Initiatives</h1></div>
-            	<div id="col_head3"><h1>Upcoming Events</h1></div>
+            	<div id="col_head1"><h1><a href="/archives/">Latest Blog Posts</a></h1></div>
+            	<div id="col_head2"><h1><a href="/initiatives/">Initiatives</a></h1></div>
+            	<div id="col_head3"><h1><a href="/events/?ec3_after=today">Upcoming Events</a></h1></div>
 				<div id="col1">
 				<?php
 				
-				query_posts($query_string . '&cat=-13');
+				query_posts($query_string . '&cat=-5' . '&posts_per_page=3');
 				
-				while ( have_posts() ) : the_post();?>
+				while ( have_posts() ) : the_post();
+				?>
 
 				<div id="post-<?php the_ID();
 					echo '" ';
@@ -56,14 +57,9 @@
 						thematic_post_class();
 						echo '">';
 					}
-     				thematic_postheader(); ?>
+     				thematic_colpostheader(); ?>
 					<div class="entry-content">
 					<?php
-					
-	    			echo '<div class="user">';
-					echo '<div class="user_thumb">'.get_avatar(get_the_author_meta('ID'),80,'',get_the_author_meta('display_name')).'</div>';
-	    			echo thematic_postmeta_authorlink();
-	  		 		echo '</div>';
 					the_excerpt();
 					?>
 					</div><!-- .entry-content -->
@@ -86,16 +82,52 @@
             	<?php wp_nav_menu( array('menu' => 'Initiatives', 'walker' => new description_walker() ) ); ?>
 				</div>
 				<div id="col3">
+				<?php
 				
-					<?php ec3_get_events(5); ?>
-					
+				ec3_get_events(3);
+				/*
+				query_posts($query_string . '&cat=5' . '&posts_per_page=3');
+				
+				while ( have_posts() ) : the_post();?>
+
+				<div id="post-<?php the_ID();
+					echo '" ';
+					if (!(THEMATIC_COMPATIBLE_POST_CLASS)) {
+						post_class();
+						echo '>';
+					} else {
+						echo 'class="';
+						thematic_post_class();
+						echo '">';
+					}
+     				thematic_colpostheader(); ?>
+					<div class="entry-content">
+					<?php
+					the_excerpt();
+					?>
+					</div><!-- .entry-content -->
+					<div style="clear:both;"></div>
+				</div><!-- #post -->
+
+			<?php 
+				
+				thematic_belowpost();
+
+				if ($count==$thm_insert_position) {
+						get_sidebar('index-insert');
+				}
+				$count = $count + 1;
+		endwhile;
+				wp_reset_query();
+				*/
+            	?>		
 				</div>
 				
 			</div><!-- #content -->
             	<div id="featured">
             	<div id="featured-post">
 				<?php
-				query_posts( 'cat=13' );
+				query_posts( 'cat=13&posts_per_page=1' );
 				while ( have_posts() ) : the_post();
 				// action hook creating the index loop
             	thematic_featured_post();

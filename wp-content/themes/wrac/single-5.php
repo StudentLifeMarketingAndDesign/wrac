@@ -41,8 +41,10 @@
     	        
     	        ?>
     			
-    			<? include 'sidebar-events.php'; ?>
-		
+    			<?php
+    			include 'sidebar-events.php';
+    			include 'sidebar.php';
+    			?>
 			</div><!-- #page-content -->
 			
 		</div><!-- #container -->

@@ -47,14 +47,9 @@
 ?>
 
 <!-- Camera -->
-    
-    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.min.js'></script>
-    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.mobile.customized.min.js'></script>
-    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.easing.1.3.js'></script> 
-    <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/camera.js'></script> 
-    <link rel='stylesheet' id='camera-css'  href='<?php echo get_template_directory_uri(); ?>/camera/css/camera.css' type='text/css' media='all'> 
+    <link rel='stylesheet' id='camera-css'  href='<?php echo get_template_directory_uri(); ?>/camera/css/camera.css' type='text/css' media='all' /> 
 
-    <script>
+    <script type='text/javascript'>
 		jQuery(function(){
 			
 			jQuery('#camera_wrap_1').camera({
@@ -62,96 +57,30 @@
 		});
 		
 		function showFancy() {
-			jQuery('#fancybox').fadeIn('slow');
+			jQuery('.fancybox#contact').fadeIn('slow');
+		}
+		
+		function showFancyGive() {
+			jQuery('.fancybox#give').fadeIn('slow');
 		}
 		
 		function hideFancy() {
-			jQuery('#fancybox').fadeOut('fast');
+			jQuery('.fancybox').fadeOut('fast');
 		}
 	</script>
 	
 
-<link href='http://fonts.googleapis.com/css?family=Arvo:700,400italic,700italic,400' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo:700,400italic,700italic,400' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 
 
 </head>
 
-<style type="text/css">
+<?php 
 
-
-.studentlife-container {
- margin: auto;
- width: 960px; 
- font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
- font-size: 12px;
- 
-   }
-.studentlife-container * {
-
- font-family: "Helvetica Neue", Arial, Helvetica, sans-serif !important;
-
-
-}
-#studentlife-header {
-  background-color: #000;
-  border-top: 5px solid #ffce39; }
-  #studentlife-header .main-links {
-  	display: inline;
-    float: left;
-    margin: 10px 0;
-    padding: 0;
-    line-height: 1.2em;
-    font-size: 1.0em;
-    font-weight: bold;
-    color: #ffce39; }
-    #studentlife-header .main-links a {
-      color: #ffce39;
-      text-decoration: none; }
-    #studentlife-header .main-links span {
-      color: #fff;
-      margin-left: 10px; }
-      #studentlife-header .main-links span a {
-        color: #fff; }
-  #studentlife-header ul {
-    margin: 10px 0;
-    padding: 0;
-    float: right; }
-    #studentlife-header ul li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: inline;
-      border-right: 1px solid #666;
-      padding-left: 5px;
-      padding-right: 5px; }
-   #studentlife-header ul li.last {
-   		border-right: none;
-   
-   }
-      #studentlife-header ul li a {
-        font-size: 0.9em;
-        line-height: 1.2em;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #999; }
-      #studentlife-header ul li a:hover {
-        color: #fff; }
-    #studentlife-header ul li#univ-nav-all {
-      border-right: none;
-      padding-right: 0; }
-      #studentlife-header ul li#univ-nav-all a {
-        text-transform: none; }
-    .clearfix { clear: both;}
-    
-    body {
-    	margin: 0;
-    	background-color: black;
-    }
-        
-</style>
+thematic_body();
+?>
 
 	
 
@@ -162,24 +91,26 @@
 			<li id="univ-nav-imu"><a href="http://imu.uiowa.edu" target="_blank">Iowa Memorial Union</a></li>
 			<li id="univ-nav-recserv"><a href="http://recserv.uiowa.edu/" target="_blank">Recreational Services</a></li>
 			<li id="univ-nav-osl" class="last"><a href="http://imu.uiowa.edu/students/" target="_blank">Student Involvement/Leadership</a></li>
-			<!--<li id="univ-nav-all"><a href="/events/#">All Departments</a> -->
-							
-			</li>
 		</ul>
 		
 		<div class="clearfix"></div> <!-- TODO: remove -->
 	</div>
 </div>
         
-	<div id="fancybox">
-	<div id="fancyexit" onclick="hideFancy();" style="cursor:pointer;"></div>
+	<div class="fancybox" id="contact">
+	<div class="fancyexit" onclick="hideFancy();" style="cursor:pointer;"></div>
 	<?php echo do_shortcode( '[contact-form-7 id="179" title="Request Info"]' ); ?>
 	</div>
-
-<?php 
-
-thematic_body();
-
+        
+	<div class="fancybox" id="give">
+	<div class="fancyexit" onclick="hideFancy();" style="cursor:pointer;"></div>
+	<h3>Support WRAC with a tax-deductible donation through the UI Foundation</h3>
+<p class="twelve">WRAC provides groups, facilitator training, speaker events, individual counseling, community programming, IWIS, and other services with a small budget and the work of many volunteers. Each gift to WRAC is matched many times over by the work of student and community volunteers. All donations, big or small, are appreciated! Donations are tax-deductible.</p>
+<p class="twelve">Donations to the Women's Resource and Action Center Fund support current services and programs including Iowa N.E.W. Leadership. 
+Donations to the Women's Resource and Action Center Endowment Fund help secure the financial future of the Center.</p>
+	<div class="butt"><a href="https://www.uifoundation.org/GiveToIowa/WebObjects/GiveToIowa.woa/wa/goTo?area=wrac" target="_blank">Donate</a></div>
+	</div>
+<?php
 // action hook for placing content before opening #wrapper
 thematic_before(); 
 
@@ -191,7 +122,7 @@ if (apply_filters('thematic_open_wrapper', true)) {
     thematic_aboveheader(); 
     
     ?>   
-	<a href="http://google.com" onclick="location.replace('http://google.com'); return false;"><div id="exit"></div></a>
+	<a href="http://google.com" onclick="location.replace('http://www.weather.com'); return false;"><div id="exit"></div></a>
 	
     <div id="header">
     
@@ -203,7 +134,7 @@ if (apply_filters('thematic_open_wrapper', true)) {
         <span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span>
         </div>
         </div>
-        <div id="dome"></div>
+        <div id="dome"><a href="http://www.uiowa.edu"><img src="/wp-content/themes/wrac/library/styles/images/dome.png" alt="The University of Iowa" /></a></div>
         </div><!--  #branding -->
 
 	</div><!-- #header-->

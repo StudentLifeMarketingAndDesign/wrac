@@ -13,6 +13,11 @@ function thematic_abovecontainer() {
 // Just between #main and #container
 function thematic_abovecontent() {
     do_action('thematic_abovecontent');
+	echo "<div id='bc'>";
+	if ( function_exists('yoast_breadcrumb') ) {
+	yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+	}
+	echo "</div>";
 } // end thematic_abovecontent
 
 
@@ -163,7 +168,7 @@ function thematic_belowpost() {
 // Just below #content
 function thematic_belowcontent() {
     do_action('thematic_belowcontent');
-    echo '<div style="clear:both;"></div><div class="butt" onclick="location.href=\'javascript:showFancy();\';" style="cursor:pointer;">Volunteer with WRAC</div><div class="butt" onclick="location.href=\'https://www.uifoundation.org/GiveToIowa/WebObjects/GiveToIowa.woa/wa/goTo?area=wrac\';" style="cursor:pointer;">Give to WRAC</div><div style="clear:both;"></div>';
+    echo '<div style="clear:both;"></div><div class="butt" onclick="location.href=\'javascript:showFancy();\';" style="cursor:pointer;">Contact WRAC</div><div class="butt" onclick="location.href=\'javascript:showFancyGive();\';" style="cursor:pointer;">Give to WRAC</div><div style="clear:both;"></div>';
             
 } // end thematic_belowcontent
 
@@ -377,6 +382,7 @@ if (function_exists('childtheme_override_category_loop'))  {
 	}
 } else {
 	function thematic_category_loop() {
+		if (have_posts()){
 		while (have_posts()) : the_post(); 
 		
 				thematic_abovepost(); ?>
@@ -404,6 +410,10 @@ if (function_exists('childtheme_override_category_loop'))  {
 				thematic_belowpost();
 		
 		endwhile;
+		}
+		else {
+			echo "<div id='no-posts'>Sorry, no posts.</div>";
+		}
 	}
 } // end category_loop
 
@@ -511,7 +521,12 @@ if (function_exists('childtheme_override_single_post'))  {
 
 						<?php wp_link_pages('before=<div class="page-link">' .__('Pages:', 'thematic') . '&after=</div>') ?>
 					</div><!-- .entry-content -->
-					<?php //thematic_postfooter(); ?>
+					<?php
+					//thematic_postfooter(); 
+		
+    	      		// calling the comments template
+    	      		thematic_comments_template();
+    	       		?>
 				</div><!-- #post -->
 		<?php
 
@@ -574,7 +589,7 @@ if (function_exists('childtheme_override_event_post'))  {
 					}
      				thematic_postheader();
 					?>
-					
+					<div style="clear:both"></div>
 					<div class="event-content">
 					<?php
 					
@@ -729,6 +744,36 @@ if (function_exists('childtheme_override_postheader'))  {
 }  // end postheader
 
 
+// Information in Col Post Header
+if (function_exists('childtheme_override_postheader'))  {
+	function thematic_postheader() {
+		childtheme_override_postheader();
+	}
+} else {
+	function thematic_colpostheader() {
+ 	   
+ 	   global $post;
+ 	 
+ 	   if ( is_404() || $post->post_type == 'page') {
+ 	       $postheader = thematic_postheader_posttitle();        
+ 	   } else {
+ 	       $postheader = "<div class='postheader'>".thematic_postheader_posttitle() . thematic_postheader_postmeta()."</div>";
+ 	       $postheader .= '<div class="user">';
+ 	       $postheader .= '<div class="user_thumb">'.get_avatar(get_the_author_meta('ID'),80,'',get_the_author_meta('display_name')).'</div>';
+ 	       if (get_the_author_meta('display_name') == "wrac"){
+ 	       $postheader .= "<span class='author vcard'><a href='/about/'>WRAC</a></span>";
+ 	       }else{
+ 	       $postheader .= thematic_postmeta_authorlink();
+ 	       }
+ 	       $postheader .= '</div>';
+ 	   }
+ 	   
+ 	   echo apply_filters( 'thematic_postheader', $postheader ); // Filter to override default post header
+	}
+}  // end colpostheader
+
+
+
 // Create the post edit link
 if (function_exists('childtheme_override_postheader_posteditlink'))  {
 	function thematic_postheader_posteditlink() {
@@ -761,8 +806,12 @@ if (function_exists('childtheme_override_postheader_posttitle'))  {
 	        $posttitle = '<h1 class="entry-title" id="single">' . get_the_title() . "</h1>\n";
 	    	$posttitle .= '<div class="user">';
 			$posttitle .= '<div class="user_thumb">'.get_avatar(get_the_author_meta('ID'),80,'',get_the_author_meta('display_name')).'</div>';
-	    	$posttitle .= thematic_postmeta_authorlink();
-	  		$posttitle .= '</div>';
+ 	     	if (get_the_author_meta('display_name') == "wrac"){
+ 	       		$posttitle .= "<span class='author vcard'><a href='/about/'>WRAC</a></span>";
+ 	       	}else{
+ 	      		$posttitle .= thematic_postmeta_authorlink();
+ 	      	}
+ 	      	$posttitle .= '</div>';
 	  	} elseif (is_page()) {
 	        $posttitle = '<h1 class="entry-title">' . get_the_title() . "</h1>\n";
 	    } elseif (is_404()) {    
@@ -967,7 +1016,7 @@ if (function_exists('childtheme_override_content'))  {
 						<li id="category-archives" class="content-column">
 							<h2><?php _e('Archives by Category', 'thematic') ?></h2>
 							<ul>
-								<?php wp_list_categories('optioncount=1&feed=RSS&title_li=&show_count=1') ?> 
+								<?php wp_list_categories('optioncount=1&feed=RSS&title_li=&show_count=1&exclude=14') ?> 
 							</ul>
 						</li>
 		<?php }
@@ -1347,6 +1396,3 @@ if (function_exists('childtheme_override_tag_ur_it'))  {
 		return trim(join( $glue, $tags ));
 	}
 } // end thematic_tag_ur_it
-
-
-?>

@@ -115,7 +115,7 @@ function thematic_commentbox_text() {
 // Located in comments-extensions.php
 // Creates the standard text 'Cancel reply'
 function thematic_cancelreply_text() {
-    $content = __('Cancel reply', 'thematic');
+    $content = __('[Cancel reply?]', 'thematic');
     return apply_filters( 'thematic_cancelreply_text', $content );
 }
 
