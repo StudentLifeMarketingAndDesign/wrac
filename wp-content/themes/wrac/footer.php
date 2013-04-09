@@ -46,7 +46,7 @@
         <a href="https://www.facebook.com/pages/Womens-Resource-and-Action-Center-WRAC/270704436274625" target="_blank"><div id="facebook"></div></a> 
         <a href="http://twitter.com/#!/wracatuiowa" target="_blank"><div id="twitter"></div></a>
         </div>
-        <div id="dosl"></div>
+        <a href="http://studentlife.uiowa.edu"><div id="dosl">Division of Student Life</div></a>
         
         <div id="disabilities">Individuals with disabilities are encouraged to attend all University of Iowa sponsored events. If you are a person with a disability who requires a reasonable accommodation in order to participate in this program, please contact the Center for Student Leadership and Involvement in advance at 319-335-3059.</div>
         

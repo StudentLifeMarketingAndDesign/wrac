@@ -1376,7 +1376,6 @@ li.content-column {
 	background-color: black;
 	/*color: #6a1b3e;*/
 	color: #fff;
-	width: 95px;
 	float: left;
 	padding: 9px;
 	margin-left: 15px;
@@ -1455,8 +1454,9 @@ p.twelve{
 }
 
 .sidebar .children li{
-	margin-left: 10px;
 	font-size: 16px;
+	margin-left: 16px;
+	margin-bottom: 0px;
 }
 
 .sidebar li{
@@ -1861,6 +1861,7 @@ span.wpcf7-not-valid-tip{
 	background: url('images/dosl.png');
 	width: 250px;
 	height: 39px;
+	text-indent: -999px;
 }
 
 #disabilities {

@@ -9,12 +9,10 @@
 ?>
 
 		<div id="container">
-		
+
 			<?php thematic_abovecontent(); ?>
-		
-			<div id="content">
-	
-	            <?php
+			<div id="page_content">
+			<?php
 	            
 	            the_post();
 	            
@@ -61,30 +59,22 @@
 	                
 	                ?>
 	                
-				</div><!-- #post -->
-	
-	            <?php
-	            
-	            thematic_belowpost();
-	            
-	            comments_template();
-	            
-	            ?>
-	
-			</div><!-- #content -->
-			
-			<?php thematic_belowcontent(); ?> 
+				</div>
+    			
+	        
+				<?php
+				include 'sidebar.php';
+				?>
+		
+			</div><!-- #page-content -->
 			
 		</div><!-- #container -->
-
+		
 <?php 
 
     // action hook for placing content below #container
     thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
-
+    
     // calling footer.php
     get_footer();
 

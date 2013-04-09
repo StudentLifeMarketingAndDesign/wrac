@@ -33,13 +33,11 @@ img.aligncenter {
 	clear: both;
 }
 .wp-caption {
-	border:1px solid #ccc;
 	text-align: center;
 	margin-bottom:18px;
-	padding:9px 5px 0;
 }
 .wp-caption img {
-	border: 1px solid #ccc;
+	border:5px solid #F5714E;
 	margin: 0;
 	padding: 0;
 }
