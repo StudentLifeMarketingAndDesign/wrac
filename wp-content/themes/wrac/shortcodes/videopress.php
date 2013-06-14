@@ -172,7 +172,7 @@ class VideoPress {
 		if ( $this->js_loaded === true )
 			return false;
 
-		$jquery = '://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js';
+		$jquery = '://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 		$swfobject = '://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js';
 		if ( is_ssl() ) {
 			$vpjs = 'https://v0.wordpress.com/js/videopress.js';

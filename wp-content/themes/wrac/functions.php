@@ -77,7 +77,7 @@ if ( apply_filters( 'thematic_post_thumbs', TRUE) ) {
 }
 
 // Load jQuery
-wp_enqueue_script('jquery');
+//wp_enqueue_script('jquery');
 
 // Path constants
 define('THEMELIB', TEMPLATEPATH . '/library');
@@ -369,4 +369,14 @@ foreach (glob("wp-content/themes/wrac/shortcodes/*.php") as $filename)
 ///
 
 add_filter('single_template', create_function('$t', 'foreach( (array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-{$cat->term_id}.php") ) return TEMPLATEPATH . "/single-{$cat->term_id}.php"; } return $t;' ));
+
+
+
+function division_bar()  
+{
+    wp_register_style( 'division-bar', get_template_directory_uri() . '/division-bar/css/division-bar.css', array(), '20130603', 'all' );
+    wp_enqueue_style( 'division-bar' );  
+}  
+add_action( 'wp_enqueue_scripts', 'division_bar' );  
+
 ?>
