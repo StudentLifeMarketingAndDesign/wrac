@@ -76,11 +76,11 @@ thematic_after();
 
 
 
-
-<!-- Camera calls -->    
+<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/division-bar/js/division-bar.js'></script>
+<!-- Camera calls --> 
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.mobile.customized.min.js'></script>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/jquery.easing.1.3.js'></script> 
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/camera/scripts/camera.js'></script>
-<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/division-bar/js/division-bar.js'></script>
+
 </body>
 </html>

@@ -45,6 +45,7 @@
     wp_head();
     
 ?>
+<base href="<?php echo get_bloginfo('url') ?>"><!--[if lte IE 6]></base><![endif]-->
 
 <!-- Camera -->
     <link rel='stylesheet' id='camera-css'  href='<?php echo get_template_directory_uri(); ?>/camera/css/camera.css' type='text/css' media='all' /> 
