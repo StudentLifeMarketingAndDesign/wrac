@@ -4,7 +4,7 @@
 				<div class="sb_header"><div>Contact Us</div></div>
 	        	<div class="sidebar"><h3>Women's Resources and Action Center</h3>
 	        	<p class="sixteen">
-	        	30 N. Madison St.<br />
+	        	130 N. Madison St.<br />
 	        	Iowa City, IA 52245
 	        	</p>
 	        	<h3 style="float:left;">P: &nbsp;</h3>
