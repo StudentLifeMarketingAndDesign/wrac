@@ -89,7 +89,7 @@ thematic_body();
 	
 
 
-<?php include 'division-bar/templates/DivisionBar.html' ?>
+<?php include 'division-bar/templates/DivisionBar.php' ?>
         
 	<div class="fancybox" id="contact">
 	<div class="fancyexit" onclick="hideFancy();" style="cursor:pointer;"></div>
