@@ -1,101 +1,66 @@
 <?php
 
-    // calling the header.php
-    get_header();
+/************************************************************************************
+ ************************************************************************************
+ **                                                                                **
+ **  If you can read this text in your browser then you don't have PHP installed.  **
+ **  Please install PHP 5.3.2 or higher, preferably PHP 5.3.4+.                    **
+ **                                                                                **
+ ************************************************************************************
+ ************************************************************************************/
 
-    // action hook for placing content above #container
-    thematic_abovecontainer();
+/**
+ * This script bolts on top of SilverStripe to allow access without the use of .htaccess
+ * rewriting rules.
+ */
 
-?>
+// This is the URL of the script that everything must be viewed with.
+define('BASE_SCRIPT_URL','index.php/');
 
-		<div id="container">
-	
-			<?php thematic_abovecontent(); ?>
-	
-			<div id="content">
+$ruLen = strlen($_SERVER['REQUEST_URI']);
+$snLen = strlen($_SERVER['SCRIPT_NAME']);
 
-				<?php 
-            	
-            	// create the navigation above the content
-            	thematic_navigation_above();
-				
-            	// calling the widget area 'index-top'
-            	get_sidebar('index-top');
-            	?>
-				<div id="col1">
-				<?php
-            	// action hook for placing content above the index loop
-            	thematic_above_indexloop();
-				
-            	// action hook creating the index loop
-            	thematic_indexloop();
-				
-            	// action hook for placing content below the index loop
-            	thematic_below_indexloop();
-            	?>
-				</div>
-				<div id="col2">
-				<?php
-            	// action hook for placing content above the index loop
-            	thematic_above_indexloop();
-				
-            	// action hook creating the index loop
-            	thematic_indexloop();
-				
-            	// action hook for placing content below the index loop
-            	thematic_below_indexloop();
-            	?>
-				</div>
-				<div id="col3">
-				<?php
-            	// action hook for placing content above the index loop
-            	thematic_above_indexloop();
-				
-            	// action hook creating the index loop
-            	thematic_indexloop();
-				
-            	// action hook for placing content below the index loop
-            	thematic_below_indexloop();
-            	?>
-				</div>
-				<?php
-            	// calling the widget area 'index-bottom'
-            	get_sidebar('index-bottom');
-				
-            	// create the navigation below the content
-            	thematic_navigation_below();
-            	
-            	?>
-				
-			</div><!-- #content -->
-            	<div id="featured">
-            	<div id="featured-post">
-				<?php
-            	// action hook for placing content above the index loop
-            	thematic_above_indexloop();
-				
-            	// action hook creating the index loop
-            	thematic_indexloop();
-				
-            	// action hook for placing content below the index loop
-            	thematic_below_indexloop();
-            	?>
-				</div>
-            	<div id="featured-thumb"></div>
-            	<div id="more-topics"><span>more topics</span></div>
-            	</div>
-            <div id="content-butt"></div>
-		
-			<?php thematic_belowcontent(); ?> 
-		
-		</div><!-- #container -->
+$isIIS = (strpos($_SERVER['SERVER_SOFTWARE'], 'Microsoft-IIS') !== false);
 
-<?php 
+// IIS will populate server variables using one of these two ways
+if($isIIS) {
+	if($_SERVER['REQUEST_URI'] == $_SERVER['SCRIPT_NAME']) {
+		$url = "";
+	} else if($ruLen > $snLen && substr($_SERVER['REQUEST_URI'],0,$snLen+1) == ($_SERVER['SCRIPT_NAME'] . '/')) {
+		$url = substr($_SERVER['REQUEST_URI'],$snLen+1);
+		$url = strtok($url, '?');
+	} else {
+		$url = $_SERVER['REQUEST_URI'];
+		if($url[0] == '/') $url = substr($url,1);
+		$url = strtok($url, '?');
+	}
 
-    // action hook for placing content below #container
-    thematic_belowcontainer();
-    
-    // calling footer.php
-    get_footer();
+// Apache will populate the server variables this way
+} else {
+	if($ruLen > $snLen && substr($_SERVER['REQUEST_URI'],0,$snLen+1) == ($_SERVER['SCRIPT_NAME'] . '/')) {
+		$url = substr($_SERVER['REQUEST_URI'],$snLen+1);
+		$url = strtok($url, '?');
+	} else {
+		$url = "";
+	}
+}
 
-?>
+$_GET['url'] = $_REQUEST['url'] = $url;
+
+$fileName = dirname($_SERVER['SCRIPT_FILENAME']) . '/' . $url;
+
+/**
+ * This code is a very simple wrapper for sending files
+ * Very quickly pass through references to files
+ */
+if($url && file_exists($fileName)) {
+	$fileURL = (dirname($_SERVER['SCRIPT_NAME'])=='/'?'':dirname($_SERVER['SCRIPT_NAME'])) . '/' . $url;
+	if(isset($_SERVER['QUERY_STRING'])) {
+		$fileURL .= '?' . $_SERVER['QUERY_STRING'];
+	}
+	header($_SERVER['SERVER_PROTOCOL'] . ' 301 Moved Permanently');
+	header("Location: $fileURL");
+	die();
+}
+
+require_once('framework/main.php');
